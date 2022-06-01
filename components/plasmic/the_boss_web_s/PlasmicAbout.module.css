@@ -474,7 +474,7 @@
 .whileRunningOurPodcastTheBallsOfSteelShowDhandhoNiSochWeEncounteredSeveralProblemsWithPodcastMonetizationAdvertisementAndSponsorshipsSoThereWeWereBuildingOurBridgeToConnectTwoExtremeEnds {
   display: block;
   font-size: 18px;
-  font-family: "Heebo", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
@@ -529,7 +529,7 @@
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
-  color: rgba(138, 138, 136, 1);
+  color: var(--token-1Zgog-UZI);
   position: relative;
   top: auto;
   left: auto;

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Heebo%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C900&family=Inter%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C900&family=Inconsolata%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C900&family=Yantramanav%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C700%3B0%2C900&family=Source+Sans+Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B0%2C700%3B0%2C900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B0%2C700%3B0%2C900&family=Inter%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C900&family=Inconsolata%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C900&family=Yantramanav%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C700%3B0%2C900&family=Heebo%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C900&display=swap");
 
 .plasmic_tokens {
   --token-jj7XFd0Vu: #ffe33b;
@@ -38,7 +38,7 @@
 }
 
 .plasmic_default_styles {
-  --mixin-HSoXOa54P9IA_font-family: "Heebo";
+  --mixin-HSoXOa54P9IA_font-family: "Source Sans Pro";
   --mixin-HSoXOa54P9IA_font-size: 1rem;
   --mixin-HSoXOa54P9IA_font-weight: 400;
   --mixin-HSoXOa54P9IA_font-style: normal;

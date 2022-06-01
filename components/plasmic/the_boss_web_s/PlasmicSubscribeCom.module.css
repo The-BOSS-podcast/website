@@ -93,6 +93,8 @@
   flex-shrink: 0;
   border-radius: 4px;
   padding: 12px 16px;
+  border-width: 1px;
+  border-style: solid;
 }
 .btnCtaPrimary > :global(.__wab_flex-container) {
   flex-direction: row;
