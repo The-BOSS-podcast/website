@@ -1,0 +1,82 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 0px;
+  min-width: 0;
+  min-height: 0;
+}
+.navBarRes:global(.__wab_instance):global(.__wab_instance) {
+  max-width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  right: 0;
+}
+.podcastersApproved {
+  background: rgba(12, 12, 12, 1);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .podcastersApproved {
+    display: flex;
+  }
+}
+.podcasterSplash1:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-shrink: 0;
+}
+.podcasterVideo2:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.podcasterWhyboss3:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.podcasterBrandslist4:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.podcasterPerks5:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.podcasterServices6:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.podcasterForm:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.footerComDesk:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  height: 574px;
+  flex-shrink: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .footerComDesk:global(.__wab_instance) {
+    height: 1097px;
+    flex-shrink: 0;
+  }
+}

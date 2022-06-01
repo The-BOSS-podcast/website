@@ -1,0 +1,700 @@
+.root {
+  flex-direction: column;
+  background: rgba(12, 12, 12, 1);
+  width: 100%;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  min-width: 0;
+  padding: var(--token-M5aAwOvxg);
+}
+.root > :global(.__wab_flex-container) {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  margin-top: calc(0px - var(--token-U5AyfKMKn));
+  height: calc(100% + var(--token-U5AyfKMKn));
+}
+.root > :global(.__wab_flex-container) > *,
+.root > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.root > :global(.__wab_flex-container) > picture > img,
+.root > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
+  margin-top: var(--token-U5AyfKMKn);
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .root {
+    padding-right: var(--token-YrseBKrxw);
+    padding-left: var(--token-YrseBKrxw);
+  }
+}
+.sectionHeading:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  left: auto;
+  top: auto;
+}
+.text__eklje {
+  display: block;
+  font-size: 28px;
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 100%;
+  color: rgba(239, 239, 239, 1);
+  position: relative;
+}
+.freeBox {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  min-width: 0;
+  padding: 8px;
+}
+.exploreTheLatestGuestEpisodesFromThePodcast {
+  display: block;
+  font-size: 28px;
+  text-align: center;
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 100%;
+  color: rgba(224, 224, 224, 1);
+}
+.columns {
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  flex-shrink: 1;
+  min-width: 0;
+  padding: 8px;
+}
+.columns > :global(.__wab_flex-container) {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  min-width: 0;
+  margin-left: calc(0px - var(--token-U5AyfKMKn));
+  width: calc(100% + var(--token-U5AyfKMKn));
+}
+.columns > :global(.__wab_flex-container) > :nth-child(3n + 1) {
+  width: calc((100% - 3 * var(--token-U5AyfKMKn)) * 4 / 12);
+}
+.columns > :global(.__wab_flex-container) > :nth-child(3n + 2) {
+  width: calc((100% - 3 * var(--token-U5AyfKMKn)) * 4 / 12);
+}
+.columns > :global(.__wab_flex-container) > :nth-child(3n + 3) {
+  width: calc((100% - 3 * var(--token-U5AyfKMKn)) * 4 / 12);
+}
+.columns > :global(.__wab_flex-container) > *,
+.columns > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.columns > :global(.__wab_flex-container) > picture > img,
+.columns
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: var(--token-U5AyfKMKn);
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .columns {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    min-width: 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .columns > :global(.__wab_flex-container) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 0;
+    margin-top: calc(0px - var(--token-U5AyfKMKn));
+    height: calc(100% + var(--token-U5AyfKMKn));
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .columns > :global(.__wab_flex-container) > :nth-child(1n + 1) {
+    width: calc((100% - 1 * var(--token-U5AyfKMKn)) * 12 / 12);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .columns > :global(.__wab_flex-container) > *,
+  .columns > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .columns > :global(.__wab_flex-container) > picture > img,
+  .columns
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-top: var(--token-U5AyfKMKn);
+  }
+}
+.column__qQ4Rc {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+.guestShowcaseComp___69XIi:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .guestShowcaseComp___69XIi:global(.__wab_instance) {
+    top: auto;
+    left: auto;
+  }
+}
+.text__jHnJ8 {
+  color: var(--token-1Zgog-UZI);
+}
+.link__khd33 {
+  flex-direction: row;
+  background: rgba(71, 71, 70, 1);
+  width: auto;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  align-self: center;
+  border-radius: 4px;
+  padding: 12px 16px;
+}
+.link__khd33 > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: calc(0px - 10px);
+  width: calc(100% + 10px);
+}
+.link__khd33 > :global(.__wab_flex-container) > *,
+.link__khd33 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.link__khd33 > :global(.__wab_flex-container) > picture > img,
+.link__khd33
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 10px;
+}
+.text__uhO8S {
+  display: block;
+  font-size: 14px;
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(255, 226, 58, 1);
+  position: relative;
+}
+.freeBox__uzkLk {
+  background: url("/plasmic/the_boss_web_s/images/barkhaLeftMeghnaRightjpg.jpeg") left 0px top 0px / cover no-repeat;
+  box-shadow: 0px 0px 0px 4px rgba(216, 195, 64, 1);
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+}
+.frame54 {
+  background: url("/plasmic/the_boss_web_s/images/greendigoLogopng.png") top 0px left 0px / cover no-repeat;
+  box-shadow: 0px 0px 0px 4px rgba(216, 195, 64, 1);
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.column__jzZT {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+.guestShowcaseComp__qLhzM:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.text__lDrK {
+  height: auto;
+}
+.text__qypbF {
+  color: var(--token-1Zgog-UZI);
+}
+.link__gvjtF {
+  flex-direction: row;
+  background: rgba(71, 71, 70, 1);
+  width: auto;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  align-self: center;
+  border-radius: 4px;
+  padding: 12px 16px;
+}
+.link__gvjtF > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: calc(0px - 10px);
+  width: calc(100% + 10px);
+}
+.link__gvjtF > :global(.__wab_flex-container) > *,
+.link__gvjtF > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.link__gvjtF > :global(.__wab_flex-container) > picture > img,
+.link__gvjtF
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 10px;
+}
+.text__tCux8 {
+  display: block;
+  font-size: 14px;
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(255, 226, 58, 1);
+  position: relative;
+}
+.freeBox__vT7G {
+  background: url("/plasmic/the_boss_web_s/images/bharatSethi2Jpg.jpeg") -17.057268722466958px -8.015180265654648px /
+    cover no-repeat;
+  box-shadow: 0px 0px 0px 4px rgba(216, 195, 64, 1);
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+}
+.frame53 {
+  background: url("/plasmic/the_boss_web_s/images/_1623395853RageCoffeeVitaBlendMediumRoastGroundCoffeeSouthIndianFilterPress250GLogopng.png") left 0px top 0px / contain repeat;
+  box-shadow: 0px 0px 0px 4px rgba(216, 195, 64, 1);
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.column__xQyRs {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+.guestShowcaseComp__xym8G:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.text__danUe {
+  height: auto;
+}
+.text__vWrH {
+  color: var(--token-1Zgog-UZI);
+}
+.link__yIi2W {
+  flex-direction: row;
+  background: rgba(71, 71, 70, 1);
+  width: auto;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  align-self: center;
+  border-radius: 4px;
+  padding: 12px 16px;
+}
+.link__yIi2W > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: calc(0px - 10px);
+  width: calc(100% + 10px);
+}
+.link__yIi2W > :global(.__wab_flex-container) > *,
+.link__yIi2W > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.link__yIi2W > :global(.__wab_flex-container) > picture > img,
+.link__yIi2W
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 10px;
+}
+.text__v3J7N {
+  display: block;
+  font-size: 14px;
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(255, 226, 58, 1);
+  position: relative;
+}
+.freeBox__escz {
+  background: url("/plasmic/the_boss_web_s/images/saameerModySnapjpeg.jpeg") left 0px top 0px / cover no-repeat;
+  box-shadow: 0px 0px 0px 4px rgba(216, 195, 64, 1);
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  border-radius: 100px;
+}
+.frame55 {
+  background: url("/plasmic/the_boss_web_s/images/image8Png.png") left 0px top 0px / cover no-repeat;
+  box-shadow: 0px 0px 0px 4px rgba(216, 195, 64, 1);
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  border-radius: 5px;
+}
+.column__zYxeq {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+.guestShowcaseComp__s8Jmj:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.text___6Izt9 {
+  color: var(--token-1Zgog-UZI);
+}
+.link__q9Yod {
+  flex-direction: row;
+  background: rgba(71, 71, 70, 1);
+  width: auto;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  align-self: center;
+  border-radius: 4px;
+  padding: 12px 16px;
+}
+.link__q9Yod > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: calc(0px - 10px);
+  width: calc(100% + 10px);
+}
+.link__q9Yod > :global(.__wab_flex-container) > *,
+.link__q9Yod > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.link__q9Yod > :global(.__wab_flex-container) > picture > img,
+.link__q9Yod
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 10px;
+}
+.text__bHrQu {
+  display: block;
+  font-size: 14px;
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(255, 226, 58, 1);
+  position: relative;
+}
+.freeBox__rPwFx {
+  background: url("/plasmic/the_boss_web_s/images/akhilFinalImagejpeg.jpeg") left 0px top 0px / cover no-repeat;
+  box-shadow: 0px 0px 0px 4px rgba(216, 195, 64, 1);
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  border-radius: 100px;
+}
+.frame56 {
+  background: url("/plasmic/the_boss_web_s/images/logoOncoursepng.png") left 0px top 1px / cover no-repeat;
+  box-shadow: 0px 0px 0px 4px rgba(216, 195, 64, 1);
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  border-radius: 5px;
+}
+.column__tl6Ul {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+.guestShowcaseComp__fsSro:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.text___5SJs6 {
+  height: auto;
+  color: var(--token-1Zgog-UZI);
+}
+.link__nrnGa {
+  flex-direction: row;
+  background: rgba(71, 71, 70, 1);
+  width: auto;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  align-self: center;
+  border-radius: 4px;
+  padding: 12px 16px;
+}
+.link__nrnGa > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: calc(0px - 10px);
+  width: calc(100% + 10px);
+}
+.link__nrnGa > :global(.__wab_flex-container) > *,
+.link__nrnGa > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.link__nrnGa > :global(.__wab_flex-container) > picture > img,
+.link__nrnGa
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 10px;
+}
+.text__zh65Y {
+  display: block;
+  font-size: 14px;
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(255, 226, 58, 1);
+  position: relative;
+}
+.freeBox__pu8P6 {
+  background: url("/plasmic/the_boss_web_s/images/prathima2Png.png") left 0px top 0px / cover no-repeat;
+  box-shadow: 0px 0px 0px 4px rgba(216, 195, 64, 1);
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  border-radius: 100px;
+}
+.frame57 {
+  background: url("/plasmic/the_boss_web_s/images/divamisymbolpng.png") left 0px top 0px / cover no-repeat;
+  box-shadow: 0px 0px 0px 4px rgba(216, 195, 64, 1);
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  border-radius: 5px;
+}
+.column__j0K95 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+.guestShowcaseComp__dyHva:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.text__s1NIi {
+  color: var(--token-1Zgog-UZI);
+}
+.link__mbTir {
+  flex-direction: row;
+  background: rgba(71, 71, 70, 1);
+  width: auto;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  align-self: center;
+  border-radius: 4px;
+  padding: 12px 16px;
+}
+.link__mbTir > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: calc(0px - 10px);
+  width: calc(100% + 10px);
+}
+.link__mbTir > :global(.__wab_flex-container) > *,
+.link__mbTir > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.link__mbTir > :global(.__wab_flex-container) > picture > img,
+.link__mbTir
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 10px;
+}
+.text__rLzT {
+  display: block;
+  font-size: 14px;
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(255, 226, 58, 1);
+  position: relative;
+}
+.freeBox__bmhru {
+  background: url("/plasmic/the_boss_web_s/images/mailservicepng.png") left 0px top 0px / cover no-repeat;
+  box-shadow: 0px 0px 0px 4px rgba(216, 195, 64, 1);
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  border-radius: 100px;
+}
+.frame58 {
+  background: url("/plasmic/the_boss_web_s/images/travelBuddyLogojpg.jpeg") left 0px top 0px / cover no-repeat;
+  box-shadow: 0px 0px 0px 4px rgba(216, 195, 64, 1);
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  border-radius: 5px;
+}
+.btnCtaPrimary11 {
+  flex-direction: row;
+  background: rgba(255, 226, 58, 1);
+  box-shadow: inset 0px 0px 0px 1px rgba(255, 226, 58, 1);
+  transform: translate(-0.5px, 0px);
+  width: auto;
+  height: 48px;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  overflow: hidden;
+  flex-shrink: 0;
+  border-radius: 4px;
+  padding: 12px 24px;
+}
+.btnCtaPrimary11 > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: calc(0px - 10px);
+  width: calc(100% + 10px);
+}
+.btnCtaPrimary11 > :global(.__wab_flex-container) > *,
+.btnCtaPrimary11 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.btnCtaPrimary11 > :global(.__wab_flex-container) > picture > img,
+.btnCtaPrimary11
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 10px;
+}
+.text___8QLr {
+  display: block;
+  font-size: 16px;
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(12, 12, 12, 1);
+  position: relative;
+}

@@ -1,0 +1,248 @@
+.root {
+  background: rgba(35, 35, 34, 1);
+  width: 20rem;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  min-height: auto;
+  flex-grow: 1;
+  padding-top: var(--token-U5AyfKMKn);
+  border-radius: 10px;
+}
+.frame280 {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: center;
+  overflow: hidden;
+  flex-direction: column;
+  padding: var(--token-c44v_bqJM);
+}
+.frame281 {
+  flex-direction: column;
+  transform: translate(-0.5px, 0px);
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.frame281 > :global(.__wab_flex-container) {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: calc(0px - 24px);
+  height: calc(100% + 24px);
+}
+.frame281 > :global(.__wab_flex-container) > *,
+.frame281 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.frame281 > :global(.__wab_flex-container) > picture > img,
+.frame281
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 24px;
+}
+.frame282 {
+  flex-direction: row;
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+}
+.frame282 > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: calc(0px - 24px);
+  width: calc(100% + 24px);
+}
+.frame282 > :global(.__wab_flex-container) > *,
+.frame282 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.frame282 > :global(.__wab_flex-container) > picture > img,
+.frame282
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 24px;
+}
+.freeBox__ooPSo {
+  background: url("/plasmic/the_boss_web_s/images/frame50.png") -17.057268722466958px -8.015180265654648px /
+    140.9691629955947px 182.16318785578747px no-repeat;
+  box-shadow: 0px 0px 0px 4px rgba(216, 195, 64, 1);
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  flex-shrink: 0;
+  border-radius: 100px;
+}
+.freeBox___3RlIk {
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  position: relative;
+  overflow: visible;
+  -webkit-mask-image: url("/plasmic/the_boss_web_s/images/mask05464953.svg");
+  -webkit-mask-size: 85px 85px;
+  -webkit-mask-repeat: no-repeat;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  background: url("/plasmic/the_boss_web_s/images/_1623395853RageCoffeeVitaBlendMediumRoastGroundCoffeeSouthIndianFilterPress250GLogopng.png") top 50% left 50% / cover repeat;
+  flex-shrink: 0;
+}
+.frame284 {
+  flex-direction: column;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  padding: 16px 24px 24px;
+}
+.frame284 > :global(.__wab_flex-container) {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: calc(0px - 32px);
+  height: calc(100% + 32px);
+}
+.frame284 > :global(.__wab_flex-container) > *,
+.frame284 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.frame284 > :global(.__wab_flex-container) > picture > img,
+.frame284
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 32px;
+}
+.frame283 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-self: center;
+  min-width: 0;
+}
+.slotTargetName {
+  font-family: "Yantramanav", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(239, 239, 239, 1);
+  text-align: center;
+  line-height: 100%;
+  letter-spacing: 0em;
+}
+.slotTargetCompany {
+  font-family: "Yantramanav", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(138, 138, 136, 1);
+  text-align: center;
+  line-height: 100%;
+  letter-spacing: 0em;
+}
+.frame285 {
+  flex-direction: column;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+}
+.frame285 > :global(.__wab_flex-container) {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: calc(0px - 8px);
+  height: calc(100% + 8px);
+}
+.frame285 > :global(.__wab_flex-container) > *,
+.frame285 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.frame285 > :global(.__wab_flex-container) > picture > img,
+.frame285
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 8px;
+}
+.slotTargetEp623 {
+  font-family: "Yantramanav", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(239, 239, 239, 1);
+  line-height: 100%;
+  letter-spacing: 0em;
+}
+.slotTargetChildren {
+  font-family: "Yantramanav", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(239, 239, 239, 1);
+  line-height: 100%;
+  letter-spacing: 0em;
+}
+.freeBox {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  align-self: center;
+  min-width: 0;
+  padding: 8px;
+}
+.link__tYDwT {
+  flex-direction: row;
+  background: rgba(71, 71, 70, 1);
+  width: auto;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  align-self: center;
+  border-radius: 4px;
+  padding: 12px 16px;
+}
+.link__tYDwT > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: calc(0px - 10px);
+  width: calc(100% + 10px);
+}
+.link__tYDwT > :global(.__wab_flex-container) > *,
+.link__tYDwT > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.link__tYDwT > :global(.__wab_flex-container) > picture > img,
+.link__tYDwT
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 10px;
+}
+.text__ad59A {
+  display: block;
+  font-size: 14px;
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(255, 226, 58, 1);
+  position: relative;
+}

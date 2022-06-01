@@ -1,0 +1,97 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  min-width: 0;
+  min-height: 0;
+}
+.navBarRes:global(.__wab_instance):global(.__wab_instance) {
+  max-width: 100%;
+  position: fixed;
+  align-self: center;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  right: 0;
+}
+.advertisersApproved {
+  background: rgba(12, 12, 12, 1);
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .advertisersApproved {
+    display: flex;
+  }
+}
+.advSplash1:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-shrink: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .advSplash1:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
+}
+.advVideo2:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.advComparision3:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.advCallout4:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.advOnboard5:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.advBossServices6:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.advPodPlat7:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.advForm8:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.footerComDesk:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  height: auto;
+  left: auto;
+  top: auto;
+  align-self: center;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .footerComDesk:global(.__wab_instance) {
+    left: auto;
+    top: auto;
+    height: auto;
+  }
+}
