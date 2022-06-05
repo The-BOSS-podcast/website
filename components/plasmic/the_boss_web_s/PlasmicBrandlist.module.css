@@ -111,6 +111,7 @@
   filter: grayscale(100%);
   transition-property: filter;
   transition-duration: 0.5s;
+  opacity: 0.8;
   border-radius: 0.5rem;
 }
 .img__tiHkg > picture > img {
@@ -121,6 +122,7 @@
 }
 .root .img__tiHkg:hover {
   filter: grayscale(0%);
+  opacity: 1;
 }
 .column__hDgkl {
   display: flex;
@@ -160,6 +162,7 @@
   filter: grayscale(100%);
   transition-property: filter;
   transition-duration: 0.5s;
+  opacity: 0.8;
   border-radius: 0.5rem;
 }
 .img__t6I3J > picture > img {
@@ -170,6 +173,7 @@
 }
 .root .img__t6I3J:hover {
   filter: grayscale(0%);
+  opacity: 1;
 }
 .column__lsuoF {
   display: flex;
@@ -209,6 +213,7 @@
   filter: grayscale(100%);
   transition-property: filter;
   transition-duration: 0.5s;
+  opacity: 0.8;
   border-radius: 0.5rem;
 }
 .img__q2WsJ > picture > img {
@@ -219,6 +224,7 @@
 }
 .root .img__q2WsJ:hover {
   filter: grayscale(0%);
+  opacity: 1;
 }
 .column__nBVoa {
   display: flex;
@@ -258,6 +264,7 @@
   filter: grayscale(100%);
   transition-property: filter;
   transition-duration: 0.5s;
+  opacity: 0.8;
   border-radius: 0.5rem;
 }
 .img__aq8ML > picture > img {
@@ -268,6 +275,7 @@
 }
 .root .img__aq8ML:hover {
   filter: grayscale(0%);
+  opacity: 1;
 }
 .column__uEz8X {
   display: flex;
@@ -307,6 +315,7 @@
   filter: grayscale(100%);
   transition-property: filter;
   transition-duration: 0.5s;
+  opacity: 0.8;
   border-radius: 0.5rem;
 }
 .img__zczrR > picture > img {
@@ -317,6 +326,7 @@
 }
 .root .img__zczrR:hover {
   filter: grayscale(0%);
+  opacity: 1;
 }
 .column__a1Pwi {
   display: flex;
@@ -356,6 +366,7 @@
   filter: grayscale(100%);
   transition-property: filter;
   transition-duration: 0.5s;
+  opacity: 0.8;
   border-radius: 0.5rem;
 }
 .img___2Kna9 > picture > img {
@@ -366,6 +377,7 @@
 }
 .root .img___2Kna9:hover {
   filter: grayscale(0%);
+  opacity: 1;
 }
 .column__zzdlX {
   display: flex;
@@ -405,6 +417,7 @@
   filter: grayscale(100%);
   transition-property: filter;
   transition-duration: 0.5s;
+  opacity: 0.8;
   border-radius: 0.5rem;
 }
 .img__ioyuo > picture > img {
@@ -415,6 +428,7 @@
 }
 .root .img__ioyuo:hover {
   filter: grayscale(0%);
+  opacity: 1;
 }
 .column__wgyv {
   display: flex;
@@ -454,6 +468,7 @@
   filter: grayscale(100%);
   transition-property: filter;
   transition-duration: 0.5s;
+  opacity: 0.8;
   border-radius: 0.5rem;
 }
 .img___9WZwC > picture > img {
@@ -464,6 +479,7 @@
 }
 .root .img___9WZwC:hover {
   filter: grayscale(0%);
+  opacity: 1;
 }
 .column__gfw9F {
   display: flex;
@@ -503,6 +519,7 @@
   filter: grayscale(100%);
   transition-property: filter;
   transition-duration: 0.5s;
+  opacity: 0.8;
   border-radius: 0.5rem;
 }
 .img___2De0G > picture > img {
@@ -513,6 +530,7 @@
 }
 .root .img___2De0G:hover {
   filter: grayscale(0%);
+  opacity: 1;
 }
 .column__gHyVj {
   display: flex;
@@ -552,6 +570,7 @@
   filter: grayscale(100%);
   transition-property: filter;
   transition-duration: 0.5s;
+  opacity: 0.8;
   border-radius: 0.5rem;
 }
 .img__ztn3U > picture > img {
@@ -562,6 +581,7 @@
 }
 .root .img__ztn3U:hover {
   filter: grayscale(0%);
+  opacity: 1;
 }
 .column__tjwpR {
   display: flex;
@@ -601,6 +621,7 @@
   filter: grayscale(100%);
   transition-property: filter;
   transition-duration: 0.5s;
+  opacity: 0.8;
   border-radius: 0.5rem;
 }
 .img___66Rn > picture > img {
@@ -611,6 +632,7 @@
 }
 .root .img___66Rn:hover {
   filter: grayscale(0%);
+  opacity: 1;
 }
 .column__elv9W {
   display: flex;
@@ -650,6 +672,7 @@
   filter: grayscale(100%);
   transition-property: filter;
   transition-duration: 0.5s;
+  opacity: 0.8;
   border-radius: 0.5rem;
 }
 .img__yozUn > picture > img {
@@ -660,4 +683,5 @@
 }
 .root .img__yozUn:hover {
   filter: grayscale(0%);
+  opacity: 1;
 }

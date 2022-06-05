@@ -52,7 +52,7 @@ type ArgPropType = keyof PlasmicSubscribeCom__ArgsType;
 export const PlasmicSubscribeCom__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicSubscribeCom__OverridesType = {
-  root?: p.Flex<"div">;
+  root?: p.Flex<"form">;
   subsEmailInput?: p.Flex<typeof Input>;
   btnCtaPrimary?: p.Flex<"button">;
 };
@@ -77,12 +77,15 @@ function PlasmicSubscribeCom__RenderFunc(props: {
 
   return (
     <p.Stack
-      as={"div"}
+      as={"form"}
       data-plasmic-name={"root"}
       data-plasmic-override={overrides.root}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       hasGap={true}
+      action={
+        "https://script.google.com/macros/s/AKfycbyPseNk-Z9zvaQeHRhszlB9CPIMufkj8ExIsAz9suUe_QdL4E9EoaycPGdGshxGxtyL/exec" as const
+      }
       className={classNames(
         projectcss.all,
         projectcss.root_reset,
@@ -91,6 +94,9 @@ function PlasmicSubscribeCom__RenderFunc(props: {
         projectcss.plasmic_tokens,
         sty.root
       )}
+      method={"post" as const}
+      name={"newsletter-subs" as const}
+      title={"" as const}
     >
       <div
         className={classNames(
@@ -117,7 +123,7 @@ function PlasmicSubscribeCom__RenderFunc(props: {
         data-plasmic-override={overrides.subsEmailInput}
         allowClear={false}
         className={classNames("__wab_instance", sty.subsEmailInput)}
-        id={"subs-email" as const}
+        id={"subsEmail" as const}
         placeholder={"Your Email" as const}
         type={"" as const}
       />
@@ -156,7 +162,7 @@ type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
-  root: "div";
+  root: "form";
   subsEmailInput: typeof Input;
   btnCtaPrimary: "button";
 };

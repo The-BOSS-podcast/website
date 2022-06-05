@@ -740,7 +740,8 @@
 }
 .btn {
   flex-direction: row;
-  background: rgba(255, 226, 58, 1);
+  background: linear-gradient(135deg, #fff33f 0%, #e6cc35 86%);
+  box-shadow: inset 0px 0px 0px 1px rgba(255, 226, 58, 1);
   width: auto;
   height: 48px;
   display: flex;

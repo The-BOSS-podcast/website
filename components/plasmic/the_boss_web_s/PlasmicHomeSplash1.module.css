@@ -22,13 +22,7 @@
 }
 .rectangle44 {
   flex-direction: row;
-  background: radial-gradient(
-      ellipse 80% 60% at 0% 100%,
-      var(--token-512meMn8y) 0%,
-      var(--token-1Zgog-UZI) 53%,
-      var(--token-d7pEWTAOn) 100%
-    )
-    0% 0% / 200% 105% repeat;
+  background: none;
   width: 100%;
   height: 100%;
   display: flex;

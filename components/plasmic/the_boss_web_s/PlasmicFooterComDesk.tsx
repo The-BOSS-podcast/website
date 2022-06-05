@@ -61,7 +61,7 @@ type ArgPropType = keyof PlasmicFooterComDesk__ArgsType;
 export const PlasmicFooterComDesk__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicFooterComDesk__OverridesType = {
-  root?: p.Flex<"div">;
+  root?: p.Flex<"footer">;
   footerSection?: p.Flex<"div">;
   podcastwidget?: p.Flex<"div">;
   podcast?: p.Flex<"div">;
@@ -99,7 +99,7 @@ function PlasmicFooterComDesk__RenderFunc(props: {
 
   return (
     true ? (
-      <div
+      <footer
         data-plasmic-name={"root"}
         data-plasmic-override={overrides.root}
         data-plasmic-root={true}
@@ -569,7 +569,7 @@ function PlasmicFooterComDesk__RenderFunc(props: {
             ) : null}
           </p.Stack>
         ) : null}
-      </div>
+      </footer>
     ) : null
   ) as React.ReactElement | null;
 }
@@ -617,7 +617,7 @@ type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
-  root: "div";
+  root: "footer";
   footerSection: "div";
   podcastwidget: "div";
   podcast: "div";

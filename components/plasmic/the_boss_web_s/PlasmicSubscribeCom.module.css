@@ -86,7 +86,7 @@
   left: auto;
   right: auto;
   overflow: hidden;
-  background: var(--token-jj7XFd0Vu);
+  background: linear-gradient(315deg, #fff33f 0%, #e6cc35 100%);
   width: 100%;
   align-self: center;
   min-width: 0;
