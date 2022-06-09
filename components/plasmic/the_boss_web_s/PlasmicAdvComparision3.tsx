@@ -101,6 +101,7 @@ function PlasmicAdvComparision3__RenderFunc(props: {
   const { variants, overrides, forNode } = props;
   const args = Object.assign({}, defaultAdvComparision3__Args, props.args);
   const $props = args;
+  const $ctx = ph.useDataEnv?.() || {};
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()

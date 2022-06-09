@@ -89,6 +89,7 @@ function PlasmicForbes30U3__RenderFunc(props: {
   const { variants, overrides, forNode } = props;
   const args = Object.assign({}, defaultForbes30U3__Args, props.args);
   const $props = args;
+  const $ctx = ph.useDataEnv?.() || {};
 
   return (
     <p.Stack

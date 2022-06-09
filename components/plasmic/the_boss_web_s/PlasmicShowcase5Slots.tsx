@@ -96,6 +96,7 @@ function PlasmicShowcase5Slots__RenderFunc(props: {
   const { variants, overrides, forNode } = props;
   const args = Object.assign({}, defaultShowcase5Slots__Args, props.args);
   const $props = args;
+  const $ctx = ph.useDataEnv?.() || {};
 
   return (
     <p.Stack

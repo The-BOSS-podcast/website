@@ -72,6 +72,7 @@ function PlasmicGuestsSplash1__RenderFunc(props: {
   const { variants, overrides, forNode } = props;
   const args = Object.assign({}, defaultGuestsSplash1__Args, props.args);
   const $props = args;
+  const $ctx = ph.useDataEnv?.() || {};
 
   return (
     <div

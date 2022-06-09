@@ -115,6 +115,7 @@ function PlasmicAdvPodPlat7__RenderFunc(props: {
   const { variants, overrides, forNode } = props;
   const args = Object.assign({}, defaultAdvPodPlat7__Args, props.args);
   const $props = args;
+  const $ctx = ph.useDataEnv?.() || {};
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()

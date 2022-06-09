@@ -77,6 +77,7 @@ function PlasmicPodcasterBrandslist4__RenderFunc(props: {
   const { variants, overrides, forNode } = props;
   const args = Object.assign({}, defaultPodcasterBrandslist4__Args, props.args);
   const $props = args;
+  const $ctx = ph.useDataEnv?.() || {};
 
   return (
     <p.Stack

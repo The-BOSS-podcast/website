@@ -92,6 +92,7 @@ function PlasmicAdvertisers__RenderFunc(props: {
   const { variants, overrides, forNode } = props;
   const args = Object.assign({}, defaultAdvertisers__Args, props.args);
   const $props = args;
+  const $ctx = ph.useDataEnv?.() || {};
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()

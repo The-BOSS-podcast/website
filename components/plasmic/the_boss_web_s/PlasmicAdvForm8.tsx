@@ -35,7 +35,7 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import SectionHeading from "../../SectionHeading"; // plasmic-import: 9cHukr1vk4/component
-import { Input } from "antd"; // plasmic-import: tO9wrxr8Nbb/codeComponent
+import Input from "antd/lib/input"; // plasmic-import: tO9wrxr8Nbb/codeComponent
 
 import { useScreenVariants as useScreenVariantsjp7EaCu1Pi8YJ } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: Jp7eaCu1Pi8yJ/globalVariant
 
@@ -85,6 +85,7 @@ function PlasmicAdvForm8__RenderFunc(props: {
   const { variants, overrides, forNode } = props;
   const args = Object.assign({}, defaultAdvForm8__Args, props.args);
   const $props = args;
+  const $ctx = ph.useDataEnv?.() || {};
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()

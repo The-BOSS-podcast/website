@@ -34,7 +34,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import { Input } from "antd"; // plasmic-import: tO9wrxr8Nbb/codeComponent
+import Input from "antd/lib/input"; // plasmic-import: tO9wrxr8Nbb/codeComponent
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -74,6 +74,7 @@ function PlasmicSubscribeCom__RenderFunc(props: {
   const { variants, overrides, forNode } = props;
   const args = Object.assign({}, defaultSubscribeCom__Args, props.args);
   const $props = args;
+  const $ctx = ph.useDataEnv?.() || {};
 
   return (
     <p.Stack
