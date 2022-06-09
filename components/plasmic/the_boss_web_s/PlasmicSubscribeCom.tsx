@@ -52,7 +52,8 @@ type ArgPropType = keyof PlasmicSubscribeCom__ArgsType;
 export const PlasmicSubscribeCom__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicSubscribeCom__OverridesType = {
-  root?: p.Flex<"form">;
+  root?: p.Flex<"div">;
+  form?: p.Flex<"form">;
   subsEmailInput?: p.Flex<typeof Input>;
   btnCtaPrimary?: p.Flex<"button">;
 };
@@ -78,15 +79,12 @@ function PlasmicSubscribeCom__RenderFunc(props: {
 
   return (
     <p.Stack
-      as={"form"}
+      as={"div"}
       data-plasmic-name={"root"}
       data-plasmic-override={overrides.root}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       hasGap={true}
-      action={
-        "https://script.google.com/macros/s/AKfycbyPseNk-Z9zvaQeHRhszlB9CPIMufkj8ExIsAz9suUe_QdL4E9EoaycPGdGshxGxtyL/exec" as const
-      }
       className={classNames(
         projectcss.all,
         projectcss.root_reset,
@@ -95,8 +93,6 @@ function PlasmicSubscribeCom__RenderFunc(props: {
         projectcss.plasmic_tokens,
         sty.root
       )}
-      method={"post" as const}
-      name={"newsletter-subs" as const}
       title={"" as const}
     >
       <div
@@ -119,43 +115,59 @@ function PlasmicSubscribeCom__RenderFunc(props: {
         {"Drop your email below and we’ll help you hone your business mindset."}
       </div>
 
-      <Input
-        data-plasmic-name={"subsEmailInput"}
-        data-plasmic-override={overrides.subsEmailInput}
-        allowClear={false}
-        className={classNames("__wab_instance", sty.subsEmailInput)}
-        id={"subsEmail" as const}
-        placeholder={"Your Email" as const}
-        type={"" as const}
-      />
-
-      <p.Stack
-        as={"button"}
-        data-plasmic-name={"btnCtaPrimary"}
-        data-plasmic-override={overrides.btnCtaPrimary}
-        hasGap={true}
-        className={classNames(
-          projectcss.all,
-          projectcss.button,
-          sty.btnCtaPrimary
-        )}
-      >
-        <div
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text__jxpdZ
-          )}
+      {true ? (
+        <p.Stack
+          as={"form"}
+          data-plasmic-name={"form"}
+          data-plasmic-override={overrides.form}
+          hasGap={true}
+          action={
+            "https://script.google.com/macros/s/AKfycbyPseNk-Z9zvaQeHRhszlB9CPIMufkj8ExIsAz9suUe_QdL4E9EoaycPGdGshxGxtyL/exec" as const
+          }
+          className={classNames(projectcss.all, sty.form)}
+          method={"post" as const}
+          name={"newsletter-subs" as const}
         >
-          {"Subscribe"}
-        </div>
-      </p.Stack>
+          <Input
+            data-plasmic-name={"subsEmailInput"}
+            data-plasmic-override={overrides.subsEmailInput}
+            allowClear={false}
+            className={classNames("__wab_instance", sty.subsEmailInput)}
+            id={"subsEmail" as const}
+            placeholder={"Your Email" as const}
+            type={"" as const}
+          />
+
+          <p.Stack
+            as={"button"}
+            data-plasmic-name={"btnCtaPrimary"}
+            data-plasmic-override={overrides.btnCtaPrimary}
+            hasGap={true}
+            className={classNames(
+              projectcss.all,
+              projectcss.button,
+              sty.btnCtaPrimary
+            )}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__jxpdZ
+              )}
+            >
+              {"Subscribe"}
+            </div>
+          </p.Stack>
+        </p.Stack>
+      ) : null}
     </p.Stack>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root", "subsEmailInput", "btnCtaPrimary"],
+  root: ["root", "form", "subsEmailInput", "btnCtaPrimary"],
+  form: ["form", "subsEmailInput", "btnCtaPrimary"],
   subsEmailInput: ["subsEmailInput"],
   btnCtaPrimary: ["btnCtaPrimary"]
 } as const;
@@ -163,7 +175,8 @@ type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
-  root: "form";
+  root: "div";
+  form: "form";
   subsEmailInput: typeof Input;
   btnCtaPrimary: "button";
 };
@@ -225,6 +238,7 @@ export const PlasmicSubscribeCom = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    form: makeNodeComponent("form"),
     subsEmailInput: makeNodeComponent("subsEmailInput"),
     btnCtaPrimary: makeNodeComponent("btnCtaPrimary"),
 
