@@ -6,7 +6,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <PlasmicRootProvider>
       <Head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src=“https://www.googletagmanager.com/gtag/js?id=G-JVXZ1REBPB”></script>
         <script>
           window.dataLayer = window.dataLayer || [];
