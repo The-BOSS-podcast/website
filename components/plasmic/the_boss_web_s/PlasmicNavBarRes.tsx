@@ -172,20 +172,6 @@ function PlasmicNavBarRes__RenderFunc(props: {
               projectcss.all,
               projectcss.a,
               projectcss.__wab_text,
-              sty.link___1Seti
-            )}
-            component={Link}
-            href={"/production" as const}
-            platform={"nextjs"}
-          >
-            {"Production"}
-          </p.PlasmicLink>
-
-          <p.PlasmicLink
-            className={classNames(
-              projectcss.all,
-              projectcss.a,
-              projectcss.__wab_text,
               sty.link__trNq
             )}
             component={Link}
@@ -207,6 +193,20 @@ function PlasmicNavBarRes__RenderFunc(props: {
             platform={"nextjs"}
           >
             {"For Podcasters"}
+          </p.PlasmicLink>
+
+          <p.PlasmicLink
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              projectcss.__wab_text,
+              sty.link___1Seti
+            )}
+            component={Link}
+            href={"/production" as const}
+            platform={"nextjs"}
+          >
+            {"Production"}
           </p.PlasmicLink>
 
           <p.PlasmicLink

@@ -78,8 +78,7 @@
           "name": "Slider",
           "componentImportPath": "react-slick"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "28Ba3BDvRe7EiWdfFNnLB6",
@@ -218,8 +217,7 @@
           "name": "Tabs",
           "componentImportPath": "@plasmicpkgs/antd"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "sx3ERcdAG6itf9PoNvoQTY",
@@ -1300,29 +1298,9 @@
       ],
       "images": [
         {
-          "id": "__JQNBw4xt3Et",
-          "name": "image.png",
-          "filePath": "../public/plasmic/the_boss_web_s/images/imagepng.jpeg"
-        },
-        {
-          "id": "fex7HrTNo",
-          "name": "Pexels Photo by George Milton",
-          "filePath": "../public/plasmic/the_boss_web_s/images/pexelsPhotoByGeorgeMilton.png"
-        },
-        {
-          "id": "hP7KabbxdF",
-          "name": "unsplash:WMD64tMfc4k",
-          "filePath": "../public/plasmic/the_boss_web_s/images/unsplashWmd64TMfc4K.png"
-        },
-        {
           "id": "XRFWtAqkDS",
           "name": "THE-BOSS-Logo1",
           "filePath": "../public/plasmic/the_boss_web_s/images/theBossLogo1.png"
-        },
-        {
-          "id": "e4m62tWpFh",
-          "name": "podcast",
-          "filePath": "../public/plasmic/the_boss_web_s/images/podcast.jpeg"
         },
         {
           "id": "hQcjsnMTWj",
@@ -1550,16 +1528,6 @@
           "filePath": "../public/plasmic/the_boss_web_s/images/frame295.svg"
         },
         {
-          "id": "nR79-vmNC",
-          "name": "Frame 298",
-          "filePath": "../public/plasmic/the_boss_web_s/images/frame298.svg"
-        },
-        {
-          "id": "bqFOh2u5C",
-          "name": "image",
-          "filePath": "../public/plasmic/the_boss_web_s/images/image.png"
-        },
-        {
           "id": "UTgoG_FdY",
           "name": "Rectangle 36",
           "filePath": "../public/plasmic/the_boss_web_s/images/rectangle36.png"
@@ -1578,11 +1546,6 @@
           "id": "HhKPSPTFz",
           "name": "Rectangle 17",
           "filePath": "../public/plasmic/the_boss_web_s/images/rectangle17.png"
-        },
-        {
-          "id": "Q5Io9Q3VmC",
-          "name": "Rectangle 18",
-          "filePath": "../public/plasmic/the_boss_web_s/images/rectangle18.jpeg"
         },
         {
           "id": "dvexp2TiDR",
@@ -1788,11 +1751,6 @@
           "id": "Esrw1J0oNA",
           "name": "THE BOSS Logo short 1",
           "filePath": "../public/plasmic/the_boss_web_s/images/theBossLogoShort1.jpeg"
-        },
-        {
-          "id": "Jmg0_Z6KD",
-          "name": "podcast 2",
-          "filePath": "../public/plasmic/the_boss_web_s/images/podcast2.jpeg"
         },
         {
           "id": "V0XRYCyYt6",
@@ -2040,24 +1998,9 @@
           "filePath": "../public/plasmic/the_boss_web_s/images/father2.svg"
         },
         {
-          "id": "k7L7uynMM",
-          "name": "podcast 3",
-          "filePath": "../public/plasmic/the_boss_web_s/images/podcast3.jpeg"
-        },
-        {
           "id": "V3j2ciu49",
           "name": "the-unsettling-podcast-amrita-sukumar-Et6gYsSoW1h-vrdeZ6uOztp.1400x1400.jpg",
           "filePath": "../public/plasmic/the_boss_web_s/images/theUnsettlingPodcastAmritaSukumarEt6GYsSoW1HVrdeZ6UOztp1400X1400Jpg.jpeg"
-        },
-        {
-          "id": "ivoQie0Fs",
-          "name": "the-socially-desi-show-anurag-sharma-GaDBk7i0dFr-7XdCNTq2wWs.1400x1400.jpg",
-          "filePath": "../public/plasmic/the_boss_web_s/images/theSociallyDesiShowAnuragSharmaGaDBk7I0DFr7XdCnTq2WWs1400X1400Jpg.jpeg"
-        },
-        {
-          "id": "og7zP6eyA",
-          "name": "little-fixes-podcast-littlefixespodcast-OHUsArt4uh6-kA2WtMoDquS.1400x1400.jpg",
-          "filePath": "../public/plasmic/the_boss_web_s/images/littleFixesPodcastLittlefixespodcastOhUsArt4Uh6KA2WtMoDquS1400X1400Jpg.jpeg"
         },
         {
           "id": "S_09UywTa",
@@ -2330,9 +2273,59 @@
           "filePath": "../public/plasmic/the_boss_web_s/images/img20220526Wa0008Jpg.jpeg"
         },
         {
+          "id": "__JQNBw4xt3Et",
+          "name": "image.png",
+          "filePath": "../public/plasmic/the_boss_web_s/images/imagepng.jpeg"
+        },
+        {
+          "id": "e4m62tWpFh",
+          "name": "podcast",
+          "filePath": "../public/plasmic/the_boss_web_s/images/podcast.jpeg"
+        },
+        {
+          "id": "nR79-vmNC",
+          "name": "Frame 298",
+          "filePath": "../public/plasmic/the_boss_web_s/images/frame298.svg"
+        },
+        {
+          "id": "bqFOh2u5C",
+          "name": "image",
+          "filePath": "../public/plasmic/the_boss_web_s/images/image.png"
+        },
+        {
+          "id": "Q5Io9Q3VmC",
+          "name": "Rectangle 18",
+          "filePath": "../public/plasmic/the_boss_web_s/images/rectangle18.jpeg"
+        },
+        {
+          "id": "Jmg0_Z6KD",
+          "name": "podcast 2",
+          "filePath": "../public/plasmic/the_boss_web_s/images/podcast2.jpeg"
+        },
+        {
+          "id": "k7L7uynMM",
+          "name": "podcast 3",
+          "filePath": "../public/plasmic/the_boss_web_s/images/podcast3.jpeg"
+        },
+        {
+          "id": "ivoQie0Fs",
+          "name": "the-socially-desi-show-anurag-sharma-GaDBk7i0dFr-7XdCNTq2wWs.1400x1400.jpg",
+          "filePath": "../public/plasmic/the_boss_web_s/images/theSociallyDesiShowAnuragSharmaGaDBk7I0DFr7XdCnTq2WWs1400X1400Jpg.jpeg"
+        },
+        {
+          "id": "og7zP6eyA",
+          "name": "little-fixes-podcast-littlefixespodcast-OHUsArt4uh6-kA2WtMoDquS.1400x1400.jpg",
+          "filePath": "../public/plasmic/the_boss_web_s/images/littleFixesPodcastLittlefixespodcastOhUsArt4Uh6KA2WtMoDquS1400X1400Jpg.jpeg"
+        },
+        {
           "id": "MgoeKl52O",
           "name": "IMG-20220526-WA0009.jpg",
           "filePath": "../public/plasmic/the_boss_web_s/images/img20220526Wa0009Jpg.jpeg"
+        },
+        {
+          "id": "tZW4R6SDS",
+          "name": "podcast2.jpg",
+          "filePath": "../public/plasmic/the_boss_web_s/images/podcast2Jpg.jpeg"
         }
       ],
       "indirect": false,
@@ -2342,12 +2335,6 @@
   ],
   "globalVariants": {
     "variantGroups": [
-      {
-        "id": "QvtMAh6IevC",
-        "name": "Screen",
-        "projectId": "r3ASNrnyvLLLAtDvzUioQ",
-        "contextFilePath": "plasmic/react_slick/PlasmicGlobalVariant__Screen.tsx"
-      },
       {
         "id": "Jp7eaCu1Pi8yJ",
         "name": "Screen",
@@ -2360,6 +2347,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.180",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.180/dist/plasmic.schema.json"
+  "cliVersion": "0.1.182",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.182/dist/plasmic.schema.json"
 }

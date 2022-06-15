@@ -132,6 +132,7 @@ function PlasmicSubscribeCom__RenderFunc(props: {
             data-plasmic-name={"subsEmailInput"}
             data-plasmic-override={overrides.subsEmailInput}
             allowClear={false}
+            aria-label={"" as const}
             className={classNames("__wab_instance", sty.subsEmailInput)}
             id={"subsEmail" as const}
             placeholder={"Your Email" as const}
