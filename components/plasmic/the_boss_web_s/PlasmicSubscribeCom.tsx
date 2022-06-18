@@ -122,7 +122,7 @@ function PlasmicSubscribeCom__RenderFunc(props: {
           data-plasmic-override={overrides.form}
           hasGap={true}
           action={
-            "https://script.google.com/macros/s/AKfycbyPseNk-Z9zvaQeHRhszlB9CPIMufkj8ExIsAz9suUe_QdL4E9EoaycPGdGshxGxtyL/exec" as const
+            "https://script.google.com/macros/s/AKfycbwHhXz6_Qhb1qfmiyLyCg-2fiY7LiAlLeGsFqNOCnRZq5ooaBD4KmltJ6hSu00LHQdS/exec" as const
           }
           className={classNames(projectcss.all, sty.form)}
           method={"post" as const}
@@ -134,7 +134,8 @@ function PlasmicSubscribeCom__RenderFunc(props: {
             allowClear={false}
             aria-label={"" as const}
             className={classNames("__wab_instance", sty.subsEmailInput)}
-            id={"subsEmail" as const}
+            id={"subs_email" as const}
+            name={"subs_email" as const}
             placeholder={"Your Email" as const}
             type={"" as const}
           />

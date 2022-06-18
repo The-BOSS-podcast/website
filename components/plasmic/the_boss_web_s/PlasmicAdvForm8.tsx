@@ -57,6 +57,7 @@ export const PlasmicAdvForm8__ArgProps = new Array<ArgPropType>();
 export type PlasmicAdvForm8__OverridesType = {
   root?: p.Flex<"div">;
   sectionHeading?: p.Flex<typeof SectionHeading>;
+  form?: p.Flex<"form">;
   firstNameInput?: p.Flex<typeof Input>;
   lastNameInput?: p.Flex<typeof Input>;
   emailInput?: p.Flex<typeof Input>;
@@ -66,7 +67,7 @@ export type PlasmicAdvForm8__OverridesType = {
   messageInput5?: p.Flex<typeof Input>;
   messageInput4?: p.Flex<typeof Input>;
   messageInput?: p.Flex<typeof Input>;
-  btn?: p.Flex<"div">;
+  btn?: p.Flex<"button">;
 };
 
 export interface DefaultAdvForm8Props {
@@ -156,9 +157,16 @@ function PlasmicAdvForm8__RenderFunc(props: {
       ) : null}
       {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : true) ? (
         <p.Stack
-          as={"div"}
+          as={"form"}
+          data-plasmic-name={"form"}
+          data-plasmic-override={overrides.form}
           hasGap={true}
-          className={classNames(projectcss.all, sty.freeBox___49DG3)}
+          action={
+            "https://script.google.com/macros/s/AKfycbwfKXPO3zSZp8WryIDOP-ra6ahR5VkXkDRP2kCaIhqWg4cD2Aq7gy2Lj3ROWXL6R8uo/exec" as const
+          }
+          className={classNames(projectcss.all, sty.form)}
+          method={"post" as const}
+          name={"advrtizer" as const}
         >
           {(
             hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
@@ -194,6 +202,7 @@ function PlasmicAdvForm8__RenderFunc(props: {
                         ? ("first-name" as const)
                         : ("first-name" as const)
                     }
+                    name={"first_name" as const}
                     placeholder={
                       hasVariant(globalVariants, "screen", "mobileOnly")
                         ? ("Your First Name" as const)
@@ -239,6 +248,7 @@ function PlasmicAdvForm8__RenderFunc(props: {
                         ? ("last-name" as const)
                         : ("last-name" as const)
                     }
+                    name={"last_name" as const}
                     placeholder={
                       hasVariant(globalVariants, "screen", "mobileOnly")
                         ? ("Your Last Name" as const)
@@ -276,8 +286,9 @@ function PlasmicAdvForm8__RenderFunc(props: {
                 className={classNames("__wab_instance", sty.emailInput)}
                 defaultValue={"" as const}
                 id={"email-add" as const}
+                name={"email_add" as const}
                 placeholder={"Your  Email address" as const}
-                type={"" as const}
+                type={"email" as const}
               />
             </p.Stack>
           ) : null}
@@ -305,6 +316,7 @@ function PlasmicAdvForm8__RenderFunc(props: {
                     className={classNames("__wab_instance", sty.phoneInput)}
                     defaultValue={"" as const}
                     id={"phone" as const}
+                    name={"phone_num" as const}
                     placeholder={"Your Contact Number" as const}
                     type={"" as const}
                   />
@@ -333,7 +345,8 @@ function PlasmicAdvForm8__RenderFunc(props: {
                 data-plasmic-override={overrides.messageInput2}
                 className={classNames("__wab_instance", sty.messageInput2)}
                 defaultValue={"" as const}
-                id={"message-text" as const}
+                id={"company-name" as const}
+                name={"company_name" as const}
                 placeholder={"Enter company name" as const}
                 type={"" as const}
               />
@@ -360,7 +373,8 @@ function PlasmicAdvForm8__RenderFunc(props: {
                 data-plasmic-override={overrides.messageInput3}
                 className={classNames("__wab_instance", sty.messageInput3)}
                 defaultValue={"" as const}
-                id={"message-text" as const}
+                id={"website" as const}
+                name={"website" as const}
                 placeholder={"your website URL" as const}
                 type={"" as const}
               />
@@ -387,7 +401,8 @@ function PlasmicAdvForm8__RenderFunc(props: {
                 data-plasmic-override={overrides.messageInput5}
                 className={classNames("__wab_instance", sty.messageInput5)}
                 defaultValue={"" as const}
-                id={"message-text" as const}
+                id={"target-aud" as const}
+                name={"target_aud" as const}
                 placeholder={
                   "You may describe your target audience here" as const
                 }
@@ -416,7 +431,8 @@ function PlasmicAdvForm8__RenderFunc(props: {
                 data-plasmic-override={overrides.messageInput4}
                 className={classNames("__wab_instance", sty.messageInput4)}
                 defaultValue={"" as const}
-                id={"message-text" as const}
+                id={"target-region" as const}
+                name={"target_region" as const}
                 placeholder={
                   "List geographical area that you want to target" as const
                 }
@@ -445,7 +461,8 @@ function PlasmicAdvForm8__RenderFunc(props: {
                 data-plasmic-override={overrides.messageInput}
                 className={classNames("__wab_instance", sty.messageInput)}
                 defaultValue={"" as const}
-                id={"message-text" as const}
+                id={"addl-notes" as const}
+                name={"addl_notes" as const}
                 placeholder={
                   "Something else you might want to convey..." as const
                 }
@@ -455,11 +472,11 @@ function PlasmicAdvForm8__RenderFunc(props: {
           ) : null}
 
           <p.Stack
-            as={"div"}
+            as={"button"}
             data-plasmic-name={"btn"}
             data-plasmic-override={overrides.btn}
             hasGap={true}
-            className={classNames(projectcss.all, sty.btn)}
+            className={classNames(projectcss.all, projectcss.button, sty.btn)}
           >
             <div
               className={classNames(
@@ -490,6 +507,7 @@ const PlasmicDescendants = {
   root: [
     "root",
     "sectionHeading",
+    "form",
     "firstNameInput",
     "lastNameInput",
     "emailInput",
@@ -502,6 +520,19 @@ const PlasmicDescendants = {
     "btn"
   ],
   sectionHeading: ["sectionHeading"],
+  form: [
+    "form",
+    "firstNameInput",
+    "lastNameInput",
+    "emailInput",
+    "phoneInput",
+    "messageInput2",
+    "messageInput3",
+    "messageInput5",
+    "messageInput4",
+    "messageInput",
+    "btn"
+  ],
   firstNameInput: ["firstNameInput"],
   lastNameInput: ["lastNameInput"],
   emailInput: ["emailInput"],
@@ -519,6 +550,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   sectionHeading: typeof SectionHeading;
+  form: "form";
   firstNameInput: typeof Input;
   lastNameInput: typeof Input;
   emailInput: typeof Input;
@@ -528,7 +560,7 @@ type NodeDefaultElementType = {
   messageInput5: typeof Input;
   messageInput4: typeof Input;
   messageInput: typeof Input;
-  btn: "div";
+  btn: "button";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -589,6 +621,7 @@ export const PlasmicAdvForm8 = Object.assign(
   {
     // Helper components rendering sub-elements
     sectionHeading: makeNodeComponent("sectionHeading"),
+    form: makeNodeComponent("form"),
     firstNameInput: makeNodeComponent("firstNameInput"),
     lastNameInput: makeNodeComponent("lastNameInput"),
     emailInput: makeNodeComponent("emailInput"),

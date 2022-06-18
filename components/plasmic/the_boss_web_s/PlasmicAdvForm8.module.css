@@ -89,7 +89,7 @@
   top: auto;
   left: auto;
 }
-.freeBox___49DG3 {
+.form {
   flex-direction: column;
   display: flex;
   width: 100%;
@@ -102,7 +102,7 @@
   min-width: 0;
   padding: var(--token-YrseBKrxw) var(--token-M5aAwOvxg);
 }
-.freeBox___49DG3 > :global(.__wab_flex-container) {
+.form > :global(.__wab_flex-container) {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -110,18 +110,14 @@
   margin-top: calc(0px - var(--token-c44v_bqJM));
   height: calc(100% + var(--token-c44v_bqJM));
 }
-.freeBox___49DG3 > :global(.__wab_flex-container) > *,
-.freeBox___49DG3 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.freeBox___49DG3 > :global(.__wab_flex-container) > picture > img,
-.freeBox___49DG3
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
+.form > :global(.__wab_flex-container) > *,
+.form > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.form > :global(.__wab_flex-container) > picture > img,
+.form > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
   margin-top: var(--token-c44v_bqJM);
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .freeBox___49DG3 {
+  .form {
     display: flex;
     flex-direction: column;
     width: auto;
@@ -135,7 +131,7 @@
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .freeBox___49DG3 > :global(.__wab_flex-container) {
+  .form > :global(.__wab_flex-container) {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
@@ -146,10 +142,10 @@
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .freeBox___49DG3 > :global(.__wab_flex-container) > *,
-  .freeBox___49DG3 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-  .freeBox___49DG3 > :global(.__wab_flex-container) > picture > img,
-  .freeBox___49DG3
+  .form > :global(.__wab_flex-container) > *,
+  .form > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .form > :global(.__wab_flex-container) > picture > img,
+  .form
     > :global(.__wab_flex-container)
     > :global(.__wab_slot)
     > picture
