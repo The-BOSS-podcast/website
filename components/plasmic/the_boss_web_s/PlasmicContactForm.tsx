@@ -49,26 +49,34 @@ export type PlasmicContactForm__VariantsArgs = {};
 type VariantPropType = keyof PlasmicContactForm__VariantsArgs;
 export const PlasmicContactForm__VariantProps = new Array<VariantPropType>();
 
-export type PlasmicContactForm__ArgsType = {};
+export type PlasmicContactForm__ArgsType = {
+  lastNameValue?: string;
+};
+
 type ArgPropType = keyof PlasmicContactForm__ArgsType;
-export const PlasmicContactForm__ArgProps = new Array<ArgPropType>();
+export const PlasmicContactForm__ArgProps = new Array<ArgPropType>(
+  "lastNameValue"
+);
 
 export type PlasmicContactForm__OverridesType = {
   root?: p.Flex<"div">;
+  form?: p.Flex<"form">;
   firstNameInput?: p.Flex<typeof Input>;
   lastNameInput?: p.Flex<typeof Input>;
   emailInput?: p.Flex<typeof Input>;
   phoneInput?: p.Flex<typeof Input>;
   messageInput?: p.Flex<typeof Input>;
-  btn?: p.Flex<"div">;
+  btn?: p.Flex<"button">;
 };
 
 export interface DefaultContactFormProps {
+  lastNameValue?: string;
   className?: string;
 }
 
-export const defaultContactForm__Args: Partial<PlasmicContactForm__ArgsType> =
-  {};
+export const defaultContactForm__Args: Partial<PlasmicContactForm__ArgsType> = {
+  lastNameValue: "" as const
+};
 
 function PlasmicContactForm__RenderFunc(props: {
   variants: PlasmicContactForm__VariantsArgs;
@@ -105,166 +113,190 @@ function PlasmicContactForm__RenderFunc(props: {
         )}
       >
         {true ? (
-          <div className={classNames(projectcss.all, sty.freeBox__t1EZ9)}>
+          <form
+            data-plasmic-name={"form"}
+            data-plasmic-override={overrides.form}
+            action={
+              "https://script.google.com/macros/s/AKfycbxKJR5Ip_a2S79Y8fj0GS7io45J95LIo494FBznQ780_86wskI/exec" as const
+            }
+            className={classNames(projectcss.all, sty.form)}
+            method={"post" as const}
+            name={"contactform" as const}
+          >
+            {true ? (
+              <div className={classNames(projectcss.all, sty.freeBox__t1EZ9)}>
+                {true ? (
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__xNDyA)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__lXb1Q
+                      )}
+                    >
+                      {"First name"}
+                    </div>
+
+                    <Input
+                      data-plasmic-name={"firstNameInput"}
+                      data-plasmic-override={overrides.firstNameInput}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.firstNameInput
+                      )}
+                      defaultValue={"" as const}
+                      id={"first-name" as const}
+                      name={"first_name" as const}
+                      placeholder={"Your First Name" as const}
+                      type={"" as const}
+                    />
+                  </p.Stack>
+                ) : null}
+                {true ? (
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__v5Wp)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__q2FT
+                      )}
+                    >
+                      {"Last name"}
+                    </div>
+
+                    <Input
+                      data-plasmic-name={"lastNameInput"}
+                      data-plasmic-override={overrides.lastNameInput}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.lastNameInput
+                      )}
+                      defaultValue={args.lastNameValue}
+                      id={"last-name" as const}
+                      name={"last_name" as const}
+                      placeholder={"Your Last Name" as const}
+                      type={"" as const}
+                    />
+                  </p.Stack>
+                ) : null}
+              </div>
+            ) : null}
             {true ? (
               <p.Stack
                 as={"div"}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__xNDyA)}
+                className={classNames(projectcss.all, sty.freeBox__fmvjL)}
               >
                 <div
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__lXb1Q
+                    sty.text__uitpo
                   )}
                 >
-                  {"First name"}
+                  {"Email"}
                 </div>
 
                 <Input
-                  data-plasmic-name={"firstNameInput"}
-                  data-plasmic-override={overrides.firstNameInput}
-                  className={classNames("__wab_instance", sty.firstNameInput)}
+                  data-plasmic-name={"emailInput"}
+                  data-plasmic-override={overrides.emailInput}
+                  className={classNames("__wab_instance", sty.emailInput)}
                   defaultValue={"" as const}
-                  id={"first-name" as const}
-                  placeholder={"Your First Name" as const}
-                  type={"" as const}
+                  id={"email-add" as const}
+                  name={"email_add" as const}
+                  placeholder={"Your  Email address" as const}
+                  type={"email" as const}
                 />
               </p.Stack>
+            ) : null}
+            {true ? (
+              <div className={classNames(projectcss.all, sty.freeBox__iuu1S)}>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__nC9XK
+                  )}
+                >
+                  {"Contact"}
+                </div>
+
+                {true ? (
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__gmA3W)}
+                  >
+                    <Input
+                      data-plasmic-name={"phoneInput"}
+                      data-plasmic-override={overrides.phoneInput}
+                      className={classNames("__wab_instance", sty.phoneInput)}
+                      defaultValue={"" as const}
+                      id={"phone" as const}
+                      name={"phone_num" as const}
+                      placeholder={"Your Contact Number" as const}
+                      type={"" as const}
+                    />
+                  </p.Stack>
+                ) : null}
+              </div>
             ) : null}
             {true ? (
               <p.Stack
                 as={"div"}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__v5Wp)}
+                className={classNames(projectcss.all, sty.freeBox__ebDqm)}
               >
                 <div
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__q2FT
+                    sty.text__meNjk
                   )}
                 >
-                  {"Last name"}
+                  {"Message"}
                 </div>
 
                 <Input
-                  data-plasmic-name={"lastNameInput"}
-                  data-plasmic-override={overrides.lastNameInput}
-                  className={classNames("__wab_instance", sty.lastNameInput)}
+                  data-plasmic-name={"messageInput"}
+                  data-plasmic-override={overrides.messageInput}
+                  className={classNames("__wab_instance", sty.messageInput)}
                   defaultValue={"" as const}
-                  id={"last-name" as const}
-                  placeholder={"Your Last Name" as const}
+                  id={"message-text" as const}
+                  name={"message_text" as const}
+                  placeholder={"let us know what you want to convey" as const}
                   type={"" as const}
                 />
               </p.Stack>
             ) : null}
-          </div>
-        ) : null}
-        {true ? (
-          <p.Stack
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__fmvjL)}
-          >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__uitpo
-              )}
-            >
-              {"Email"}
-            </div>
 
-            <Input
-              data-plasmic-name={"emailInput"}
-              data-plasmic-override={overrides.emailInput}
-              className={classNames("__wab_instance", sty.emailInput)}
-              defaultValue={"" as const}
-              id={"email-add" as const}
-              placeholder={"Your  Email address" as const}
-              type={"" as const}
-            />
-          </p.Stack>
-        ) : null}
-        {true ? (
-          <div className={classNames(projectcss.all, sty.freeBox__iuu1S)}>
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__nC9XK
-              )}
+            <p.Stack
+              as={"button"}
+              data-plasmic-name={"btn"}
+              data-plasmic-override={overrides.btn}
+              hasGap={true}
+              className={classNames(projectcss.all, projectcss.button, sty.btn)}
             >
-              {"Contact"}
-            </div>
-
-            {true ? (
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__gmA3W)}
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__oz1Qo
+                )}
               >
-                <Input
-                  data-plasmic-name={"phoneInput"}
-                  data-plasmic-override={overrides.phoneInput}
-                  className={classNames("__wab_instance", sty.phoneInput)}
-                  defaultValue={"" as const}
-                  id={"phone" as const}
-                  placeholder={"Your Contact Number" as const}
-                  type={"" as const}
-                />
-              </p.Stack>
-            ) : null}
-          </div>
+                {"Send Message"}
+              </div>
+            </p.Stack>
+          </form>
         ) : null}
-        {true ? (
-          <p.Stack
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__ebDqm)}
-          >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__meNjk
-              )}
-            >
-              {"Message"}
-            </div>
-
-            <Input
-              data-plasmic-name={"messageInput"}
-              data-plasmic-override={overrides.messageInput}
-              className={classNames("__wab_instance", sty.messageInput)}
-              defaultValue={"" as const}
-              id={"message-text" as const}
-              placeholder={"let us know what you want to convey" as const}
-              type={"" as const}
-            />
-          </p.Stack>
-        ) : null}
-
-        <p.Stack
-          as={"div"}
-          data-plasmic-name={"btn"}
-          data-plasmic-override={overrides.btn}
-          hasGap={true}
-          className={classNames(projectcss.all, sty.btn)}
-        >
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__oz1Qo
-            )}
-          >
-            {"Send Message"}
-          </div>
-        </p.Stack>
       </p.Stack>
     ) : null
   ) as React.ReactElement | null;
@@ -273,6 +305,16 @@ function PlasmicContactForm__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "form",
+    "firstNameInput",
+    "lastNameInput",
+    "emailInput",
+    "phoneInput",
+    "messageInput",
+    "btn"
+  ],
+  form: [
+    "form",
     "firstNameInput",
     "lastNameInput",
     "emailInput",
@@ -292,12 +334,13 @@ type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  form: "form";
   firstNameInput: typeof Input;
   lastNameInput: typeof Input;
   emailInput: typeof Input;
   phoneInput: typeof Input;
   messageInput: typeof Input;
-  btn: "div";
+  btn: "button";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -357,6 +400,7 @@ export const PlasmicContactForm = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    form: makeNodeComponent("form"),
     firstNameInput: makeNodeComponent("firstNameInput"),
     lastNameInput: makeNodeComponent("lastNameInput"),
     emailInput: makeNodeComponent("emailInput"),

@@ -36,7 +36,7 @@ import {
 } from "@plasmicapp/react-web";
 import SectionHeading from "../../SectionHeading"; // plasmic-import: 9cHukr1vk4/component
 import Input from "antd/lib/input"; // plasmic-import: tO9wrxr8Nbb/codeComponent
-import Switch from "../../Switch"; // plasmic-import: A2Qt6PUzyRm/component
+import Checkbox from "../../Checkbox"; // plasmic-import: 4aFWKT-1DBY/component
 
 import { useScreenVariants as useScreenVariantsjp7EaCu1Pi8YJ } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: Jp7eaCu1Pi8yJ/globalVariant
 
@@ -58,6 +58,7 @@ export const PlasmicPodcasterForm__ArgProps = new Array<ArgPropType>();
 export type PlasmicPodcasterForm__OverridesType = {
   root?: p.Flex<"div">;
   sectionHeading?: p.Flex<typeof SectionHeading>;
+  form?: p.Flex<"form">;
   firstNameInput?: p.Flex<typeof Input>;
   lastNameInput?: p.Flex<typeof Input>;
   emailInput?: p.Flex<typeof Input>;
@@ -71,8 +72,8 @@ export type PlasmicPodcasterForm__OverridesType = {
   firstNameInput2?: p.Flex<typeof Input>;
   lastNameInput2?: p.Flex<typeof Input>;
   lastNameInput3?: p.Flex<typeof Input>;
-  _switch?: p.Flex<typeof Switch>;
-  btn?: p.Flex<"div">;
+  checkbox?: p.Flex<typeof Checkbox>;
+  btn?: p.Flex<"button">;
 };
 
 export interface DefaultPodcasterFormProps {
@@ -162,416 +163,424 @@ function PlasmicPodcasterForm__RenderFunc(props: {
         </p.Stack>
       ) : null}
       {true ? (
-        <div className={classNames(projectcss.all, sty.freeBox__tPup5)}>
-          {(
-            hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
-          ) ? (
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__mbp9K)}
-            >
+        <form
+          data-plasmic-name={"form"}
+          data-plasmic-override={overrides.form}
+          action={
+            "https://script.google.com/macros/s/AKfycbw7CO2JlLGjctAzDXQepza4YnA3ePi9_fZeVQfyYGZVAc_3jpolJTB7mkWXiOjST-0aGQ/exec" as const
+          }
+          className={classNames(projectcss.all, sty.form)}
+          method={"post" as const}
+          name={"podcaster" as const}
+        >
+          {true ? (
+            <div className={classNames(projectcss.all, sty.freeBox__tPup5)}>
               {(
                 hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
               ) ? (
-                <div className={classNames(projectcss.all, sty.freeBox__ktlOk)}>
-                  {true ? (
-                    <p.Stack
-                      as={"div"}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.freeBox__yJioa)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__d5XLz
-                        )}
-                      >
-                        {"First name"}
-                      </div>
-
-                      <Input
-                        data-plasmic-name={"firstNameInput"}
-                        data-plasmic-override={overrides.firstNameInput}
-                        className={classNames(
-                          "__wab_instance",
-                          sty.firstNameInput
-                        )}
-                        defaultValue={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("" as const)
-                            : ("" as const)
-                        }
-                        id={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("first-name" as const)
-                            : ("first-name" as const)
-                        }
-                        placeholder={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("Your First Name" as const)
-                            : ("Your First Name" as const)
-                        }
-                        type={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("" as const)
-                            : ("" as const)
-                        }
-                      />
-                    </p.Stack>
-                  ) : null}
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__mbp9K)}
+                >
                   {(
                     hasVariant(globalVariants, "screen", "mobileOnly")
                       ? true
                       : true
                   ) ? (
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__ktlOk)}
+                    >
+                      {true ? (
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__yJioa
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__d5XLz
+                            )}
+                          >
+                            {"First name"}
+                          </div>
+
+                          <Input
+                            data-plasmic-name={"firstNameInput"}
+                            data-plasmic-override={overrides.firstNameInput}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.firstNameInput
+                            )}
+                            defaultValue={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("" as const)
+                                : ("" as const)
+                            }
+                            id={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("first-name" as const)
+                                : ("first-name" as const)
+                            }
+                            name={"first_name" as const}
+                            placeholder={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("Your First Name" as const)
+                                : ("Your First Name" as const)
+                            }
+                            type={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("" as const)
+                                : ("" as const)
+                            }
+                          />
+                        </p.Stack>
+                      ) : null}
+                      {(
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? true
+                          : true
+                      ) ? (
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__pRiP
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__xtVxl
+                            )}
+                          >
+                            {"Last name"}
+                          </div>
+
+                          <Input
+                            data-plasmic-name={"lastNameInput"}
+                            data-plasmic-override={overrides.lastNameInput}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.lastNameInput
+                            )}
+                            defaultValue={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("" as const)
+                                : ("" as const)
+                            }
+                            id={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("last-name" as const)
+                                : ("last-name" as const)
+                            }
+                            name={"last_name" as const}
+                            placeholder={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("Your Last Name" as const)
+                                : ("Your Last Name" as const)
+                            }
+                            type={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("" as const)
+                                : ("" as const)
+                            }
+                          />
+                        </p.Stack>
+                      ) : null}
+                    </div>
+                  ) : null}
+                  {true ? (
                     <p.Stack
                       as={"div"}
                       hasGap={true}
-                      className={classNames(projectcss.all, sty.freeBox__pRiP)}
+                      className={classNames(projectcss.all, sty.freeBox__qn6Nk)}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__xtVxl
+                          sty.text__gQsMu
                         )}
                       >
-                        {"Last name"}
+                        {"Email"}
                       </div>
 
                       <Input
-                        data-plasmic-name={"lastNameInput"}
-                        data-plasmic-override={overrides.lastNameInput}
-                        className={classNames(
-                          "__wab_instance",
-                          sty.lastNameInput
-                        )}
-                        defaultValue={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("" as const)
-                            : ("" as const)
-                        }
-                        id={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("last-name" as const)
-                            : ("last-name" as const)
-                        }
-                        placeholder={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("Your Last Name" as const)
-                            : ("Your Last Name" as const)
-                        }
-                        type={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("" as const)
-                            : ("" as const)
-                        }
-                      />
-                    </p.Stack>
-                  ) : null}
-                </div>
-              ) : null}
-              {true ? (
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__qn6Nk)}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__gQsMu
-                    )}
-                  >
-                    {"Email"}
-                  </div>
-
-                  <Input
-                    data-plasmic-name={"emailInput"}
-                    data-plasmic-override={overrides.emailInput}
-                    className={classNames("__wab_instance", sty.emailInput)}
-                    defaultValue={"" as const}
-                    id={"email-add" as const}
-                    placeholder={"Your  Email address" as const}
-                    type={"" as const}
-                  />
-                </p.Stack>
-              ) : null}
-              {true ? (
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__zr5Nh)}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___7Xcqs
-                    )}
-                  >
-                    {"Contact"}
-                  </div>
-
-                  {true ? (
-                    <p.Stack
-                      as={"div"}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.freeBox__lAfYy)}
-                    >
-                      <Input
-                        data-plasmic-name={"phoneInput"}
-                        data-plasmic-override={overrides.phoneInput}
-                        className={classNames("__wab_instance", sty.phoneInput)}
+                        data-plasmic-name={"emailInput"}
+                        data-plasmic-override={overrides.emailInput}
+                        className={classNames("__wab_instance", sty.emailInput)}
                         defaultValue={"" as const}
-                        id={"phone" as const}
-                        placeholder={"Your Contact Number" as const}
+                        id={"email-add" as const}
+                        name={"email_add" as const}
+                        placeholder={"Your  Email address" as const}
                         type={"" as const}
                       />
                     </p.Stack>
                   ) : null}
-                </p.Stack>
-              ) : null}
-              {true ? (
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__j0SjH)}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__g871S
-                    )}
-                  >
-                    {"Website"}
-                  </div>
-
-                  <Input
-                    data-plasmic-name={"messageInput3"}
-                    data-plasmic-override={overrides.messageInput3}
-                    className={classNames("__wab_instance", sty.messageInput3)}
-                    defaultValue={"" as const}
-                    id={"message-text" as const}
-                    placeholder={"your website URL" as const}
-                    type={"" as const}
-                  />
-                </p.Stack>
-              ) : null}
-              {true ? (
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__f7QN)}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___2JmP
-                    )}
-                  >
-                    {"Additional Notes"}
-                  </div>
-
-                  <Input
-                    data-plasmic-name={"messageInput"}
-                    data-plasmic-override={overrides.messageInput}
-                    className={classNames("__wab_instance", sty.messageInput)}
-                    defaultValue={"" as const}
-                    id={"message-text" as const}
-                    placeholder={
-                      "Something else you might want to convey..." as const
-                    }
-                    type={"" as const}
-                  />
-                </p.Stack>
-              ) : null}
-            </p.Stack>
-          ) : null}
-          {(
-            hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
-          ) ? (
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__j4GEe)}
-            >
-              {true ? (
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__bNaja)}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___1NIpo
-                    )}
-                  >
-                    {"Podcast Name"}
-                  </div>
-
-                  <Input
-                    data-plasmic-name={"emailInput2"}
-                    data-plasmic-override={overrides.emailInput2}
-                    className={classNames("__wab_instance", sty.emailInput2)}
-                    defaultValue={"" as const}
-                    id={"email-add" as const}
-                    placeholder={"Enter podcast name" as const}
-                    type={"" as const}
-                  />
-                </p.Stack>
-              ) : null}
-              {true ? (
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox___7N8Lz)}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__les1Y
-                    )}
-                  >
-                    {"Podcast category"}
-                  </div>
-
                   {true ? (
                     <p.Stack
                       as={"div"}
                       hasGap={true}
-                      className={classNames(projectcss.all, sty.freeBox__epJ7P)}
+                      className={classNames(projectcss.all, sty.freeBox__zr5Nh)}
                     >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___7Xcqs
+                        )}
+                      >
+                        {"Contact"}
+                      </div>
+
+                      {true ? (
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__lAfYy
+                          )}
+                        >
+                          <Input
+                            data-plasmic-name={"phoneInput"}
+                            data-plasmic-override={overrides.phoneInput}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.phoneInput
+                            )}
+                            defaultValue={"" as const}
+                            id={"phone" as const}
+                            name={"phone_num" as const}
+                            placeholder={"Your Contact Number" as const}
+                            type={"" as const}
+                          />
+                        </p.Stack>
+                      ) : null}
+                    </p.Stack>
+                  ) : null}
+                  {true ? (
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__j0SjH)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__g871S
+                        )}
+                      >
+                        {"Website"}
+                      </div>
+
                       <Input
-                        data-plasmic-name={"phoneInput2"}
-                        data-plasmic-override={overrides.phoneInput2}
+                        data-plasmic-name={"messageInput3"}
+                        data-plasmic-override={overrides.messageInput3}
                         className={classNames(
                           "__wab_instance",
-                          sty.phoneInput2
+                          sty.messageInput3
                         )}
                         defaultValue={"" as const}
-                        id={"phone" as const}
+                        id={"website-url" as const}
+                        name={"website_url" as const}
+                        placeholder={"your website URL" as const}
+                        type={"" as const}
+                      />
+                    </p.Stack>
+                  ) : null}
+                  {true ? (
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__f7QN)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___2JmP
+                        )}
+                      >
+                        {"Additional Notes"}
+                      </div>
+
+                      <Input
+                        data-plasmic-name={"messageInput"}
+                        data-plasmic-override={overrides.messageInput}
+                        className={classNames(
+                          "__wab_instance",
+                          sty.messageInput
+                        )}
+                        defaultValue={"" as const}
+                        id={"addl-notes" as const}
+                        name={"addl_notes" as const}
                         placeholder={
-                          "Ex: entreprenuership, finance, travel, etc." as const
+                          "Something else you might want to convey..." as const
                         }
                         type={"" as const}
                       />
                     </p.Stack>
                   ) : null}
-                </p.Stack>
-              ) : null}
-              {true ? (
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox___1TmhQ)}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__a9Fcf
-                    )}
-                  >
-                    {"RSS Feed URL"}
-                  </div>
-
-                  <Input
-                    data-plasmic-name={"messageInput4"}
-                    data-plasmic-override={overrides.messageInput4}
-                    className={classNames("__wab_instance", sty.messageInput4)}
-                    defaultValue={"" as const}
-                    id={"message-text" as const}
-                    placeholder={"Enter your Podcast RSS URL" as const}
-                    type={"" as const}
-                  />
-                </p.Stack>
-              ) : null}
-              {true ? (
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__vlxBm)}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__wbiIv
-                    )}
-                  >
-                    {"Hosting Platforms"}
-                  </div>
-
-                  <Input
-                    data-plasmic-name={"messageInput2"}
-                    data-plasmic-override={overrides.messageInput2}
-                    className={classNames("__wab_instance", sty.messageInput2)}
-                    defaultValue={"" as const}
-                    id={"message-text" as const}
-                    placeholder={"Select platforms" as const}
-                    type={"" as const}
-                  />
                 </p.Stack>
               ) : null}
               {(
                 hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
               ) ? (
-                <div className={classNames(projectcss.all, sty.freeBox__qyNr)}>
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__j4GEe)}
+                >
+                  {true ? (
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__bNaja)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___1NIpo
+                        )}
+                      >
+                        {"Podcast Name"}
+                      </div>
+
+                      <Input
+                        data-plasmic-name={"emailInput2"}
+                        data-plasmic-override={overrides.emailInput2}
+                        className={classNames(
+                          "__wab_instance",
+                          sty.emailInput2
+                        )}
+                        defaultValue={"" as const}
+                        id={"podcast-name" as const}
+                        name={"podcast_name" as const}
+                        placeholder={"Enter podcast name" as const}
+                        type={"" as const}
+                      />
+                    </p.Stack>
+                  ) : null}
                   {true ? (
                     <p.Stack
                       as={"div"}
                       hasGap={true}
                       className={classNames(
                         projectcss.all,
-                        sty.freeBox___7Sh7J
+                        sty.freeBox___7N8Lz
                       )}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__kqFed
+                          sty.text__les1Y
                         )}
                       >
-                        {"Total Episodes live"}
+                        {"Podcast category"}
+                      </div>
+
+                      {true ? (
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__epJ7P
+                          )}
+                        >
+                          <Input
+                            data-plasmic-name={"phoneInput2"}
+                            data-plasmic-override={overrides.phoneInput2}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.phoneInput2
+                            )}
+                            defaultValue={"" as const}
+                            id={"podcast-category" as const}
+                            name={"podcast_category" as const}
+                            placeholder={
+                              "Ex: entreprenuership, finance, travel, etc." as const
+                            }
+                            type={"" as const}
+                          />
+                        </p.Stack>
+                      ) : null}
+                    </p.Stack>
+                  ) : null}
+                  {true ? (
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___1TmhQ
+                      )}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__a9Fcf
+                        )}
+                      >
+                        {"RSS Feed URL"}
                       </div>
 
                       <Input
-                        data-plasmic-name={"firstNameInput2"}
-                        data-plasmic-override={overrides.firstNameInput2}
+                        data-plasmic-name={"messageInput4"}
+                        data-plasmic-override={overrides.messageInput4}
                         className={classNames(
                           "__wab_instance",
-                          sty.firstNameInput2
+                          sty.messageInput4
                         )}
-                        defaultValue={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("" as const)
-                            : ("" as const)
-                        }
-                        id={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("first-name" as const)
-                            : ("first-name" as const)
-                        }
-                        placeholder={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("Your First Name" as const)
-                            : ("Ex: 100" as const)
-                        }
-                        type={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("" as const)
-                            : ("" as const)
-                        }
+                        defaultValue={"" as const}
+                        id={"podcast-feed" as const}
+                        name={"podcast_feed" as const}
+                        placeholder={"Enter your Podcast RSS URL" as const}
+                        type={"" as const}
+                      />
+                    </p.Stack>
+                  ) : null}
+                  {true ? (
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__vlxBm)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__wbiIv
+                        )}
+                      >
+                        {"Hosting Platforms"}
+                      </div>
+
+                      <Input
+                        data-plasmic-name={"messageInput2"}
+                        data-plasmic-override={overrides.messageInput2}
+                        className={classNames(
+                          "__wab_instance",
+                          sty.messageInput2
+                        )}
+                        defaultValue={"" as const}
+                        id={"hosting-platform" as const}
+                        name={"hosting_platform" as const}
+                        placeholder={"Select platforms" as const}
+                        type={"" as const}
                       />
                     </p.Stack>
                   ) : null}
@@ -580,149 +589,217 @@ function PlasmicPodcasterForm__RenderFunc(props: {
                       ? true
                       : true
                   ) ? (
-                    <p.Stack
-                      as={"div"}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.freeBox__bhYs9)}
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__qyNr)}
                     >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___7FPuP
-                        )}
-                      >
-                        {"Total Downloads"}
-                      </div>
+                      {true ? (
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___7Sh7J
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__kqFed
+                            )}
+                          >
+                            {"Total Episodes live"}
+                          </div>
 
-                      <Input
-                        data-plasmic-name={"lastNameInput2"}
-                        data-plasmic-override={overrides.lastNameInput2}
-                        className={classNames(
-                          "__wab_instance",
-                          sty.lastNameInput2
-                        )}
-                        defaultValue={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("" as const)
-                            : ("" as const)
-                        }
-                        id={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("last-name" as const)
-                            : ("last-name" as const)
-                        }
-                        placeholder={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("Your Last Name" as const)
-                            : ("Ex: 10000" as const)
-                        }
-                        type={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("" as const)
-                            : ("" as const)
-                        }
-                      />
-                    </p.Stack>
-                  ) : null}
-                  {(
-                    hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? true
-                      : true
-                  ) ? (
-                    <p.Stack
-                      as={"div"}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.freeBox___1Zy5)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__bT0K
-                        )}
-                      >
-                        {"Avg. Downloads/month"}
-                      </div>
+                          <Input
+                            data-plasmic-name={"firstNameInput2"}
+                            data-plasmic-override={overrides.firstNameInput2}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.firstNameInput2
+                            )}
+                            defaultValue={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("" as const)
+                                : ("" as const)
+                            }
+                            id={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("first-name" as const)
+                                : ("total-episodes" as const)
+                            }
+                            name={"total_episodes" as const}
+                            placeholder={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("Your First Name" as const)
+                                : ("Ex: 100" as const)
+                            }
+                            type={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("" as const)
+                                : ("" as const)
+                            }
+                          />
+                        </p.Stack>
+                      ) : null}
+                      {(
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? true
+                          : true
+                      ) ? (
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__bhYs9
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___7FPuP
+                            )}
+                          >
+                            {"Total Downloads"}
+                          </div>
 
-                      <Input
-                        data-plasmic-name={"lastNameInput3"}
-                        data-plasmic-override={overrides.lastNameInput3}
-                        className={classNames(
-                          "__wab_instance",
-                          sty.lastNameInput3
-                        )}
-                        defaultValue={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("" as const)
-                            : ("" as const)
-                        }
-                        id={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("last-name" as const)
-                            : ("last-name" as const)
-                        }
-                        placeholder={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("Your Last Name" as const)
-                            : ("Ex: 100" as const)
-                        }
-                        type={
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? ("" as const)
-                            : ("" as const)
-                        }
-                      />
-                    </p.Stack>
+                          <Input
+                            data-plasmic-name={"lastNameInput2"}
+                            data-plasmic-override={overrides.lastNameInput2}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.lastNameInput2
+                            )}
+                            defaultValue={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("" as const)
+                                : ("" as const)
+                            }
+                            id={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("last-name" as const)
+                                : ("total-downloads" as const)
+                            }
+                            name={"total_downloads" as const}
+                            placeholder={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("Your Last Name" as const)
+                                : ("Ex: 10000" as const)
+                            }
+                            type={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("" as const)
+                                : ("" as const)
+                            }
+                          />
+                        </p.Stack>
+                      ) : null}
+                      {(
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? true
+                          : true
+                      ) ? (
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___1Zy5
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__bT0K
+                            )}
+                          >
+                            {"Avg. Downloads/month"}
+                          </div>
+
+                          <Input
+                            data-plasmic-name={"lastNameInput3"}
+                            data-plasmic-override={overrides.lastNameInput3}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.lastNameInput3
+                            )}
+                            defaultValue={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("" as const)
+                                : ("" as const)
+                            }
+                            id={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("last-name" as const)
+                                : ("avg-dld-mnth" as const)
+                            }
+                            name={"avg_dld_mnth" as const}
+                            placeholder={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("Your Last Name" as const)
+                                : ("Ex: 100" as const)
+                            }
+                            type={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? ("" as const)
+                                : ("" as const)
+                            }
+                          />
+                        </p.Stack>
+                      ) : null}
+                    </div>
                   ) : null}
-                </div>
+                </p.Stack>
               ) : null}
+            </div>
+          ) : null}
+          {true ? (
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__o3Oix)}
+            >
+              <Checkbox
+                data-plasmic-name={"checkbox"}
+                data-plasmic-override={overrides.checkbox}
+                className={classNames("__wab_instance", sty.checkbox)}
+                name={"IsMonetized" as const}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__rGePp
+                  )}
+                >
+                  {"Is your podcast Monetised?"}
+                </div>
+              </Checkbox>
             </p.Stack>
           ) : null}
-        </div>
-      ) : null}
-      {true ? (
-        <p.Stack
-          as={"div"}
-          hasGap={true}
-          className={classNames(projectcss.all, sty.freeBox__o3Oix)}
-        >
-          <Switch
-            data-plasmic-name={"_switch"}
-            data-plasmic-override={overrides._switch}
-            className={classNames("__wab_instance", sty._switch)}
-            name={"IsMonetized" as const}
+
+          <p.Stack
+            as={"button"}
+            data-plasmic-name={"btn"}
+            data-plasmic-override={overrides.btn}
+            hasGap={true}
+            className={classNames(projectcss.all, projectcss.button, sty.btn)}
           >
             <div
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__rGePp
+                sty.text__cbUHg
               )}
             >
-              {"Is your podcast Monetised?"}
+              {"Submit Form"}
             </div>
-          </Switch>
-        </p.Stack>
+          </p.Stack>
+        </form>
       ) : null}
-
-      <p.Stack
-        as={"div"}
-        data-plasmic-name={"btn"}
-        data-plasmic-override={overrides.btn}
-        hasGap={true}
-        className={classNames(projectcss.all, sty.btn)}
-      >
-        <div
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text__cbUHg
-          )}
-        >
-          {"Submit Form"}
-        </div>
-      </p.Stack>
     </p.Stack>
   ) as React.ReactElement | null;
 }
@@ -731,6 +808,7 @@ const PlasmicDescendants = {
   root: [
     "root",
     "sectionHeading",
+    "form",
     "firstNameInput",
     "lastNameInput",
     "emailInput",
@@ -744,10 +822,28 @@ const PlasmicDescendants = {
     "firstNameInput2",
     "lastNameInput2",
     "lastNameInput3",
-    "_switch",
+    "checkbox",
     "btn"
   ],
   sectionHeading: ["sectionHeading"],
+  form: [
+    "form",
+    "firstNameInput",
+    "lastNameInput",
+    "emailInput",
+    "phoneInput",
+    "messageInput3",
+    "messageInput",
+    "emailInput2",
+    "phoneInput2",
+    "messageInput4",
+    "messageInput2",
+    "firstNameInput2",
+    "lastNameInput2",
+    "lastNameInput3",
+    "checkbox",
+    "btn"
+  ],
   firstNameInput: ["firstNameInput"],
   lastNameInput: ["lastNameInput"],
   emailInput: ["emailInput"],
@@ -761,7 +857,7 @@ const PlasmicDescendants = {
   firstNameInput2: ["firstNameInput2"],
   lastNameInput2: ["lastNameInput2"],
   lastNameInput3: ["lastNameInput3"],
-  _switch: ["_switch"],
+  checkbox: ["checkbox"],
   btn: ["btn"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -770,6 +866,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   sectionHeading: typeof SectionHeading;
+  form: "form";
   firstNameInput: typeof Input;
   lastNameInput: typeof Input;
   emailInput: typeof Input;
@@ -783,8 +880,8 @@ type NodeDefaultElementType = {
   firstNameInput2: typeof Input;
   lastNameInput2: typeof Input;
   lastNameInput3: typeof Input;
-  _switch: typeof Switch;
-  btn: "div";
+  checkbox: typeof Checkbox;
+  btn: "button";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -845,6 +942,7 @@ export const PlasmicPodcasterForm = Object.assign(
   {
     // Helper components rendering sub-elements
     sectionHeading: makeNodeComponent("sectionHeading"),
+    form: makeNodeComponent("form"),
     firstNameInput: makeNodeComponent("firstNameInput"),
     lastNameInput: makeNodeComponent("lastNameInput"),
     emailInput: makeNodeComponent("emailInput"),
@@ -858,7 +956,7 @@ export const PlasmicPodcasterForm = Object.assign(
     firstNameInput2: makeNodeComponent("firstNameInput2"),
     lastNameInput2: makeNodeComponent("lastNameInput2"),
     lastNameInput3: makeNodeComponent("lastNameInput3"),
-    _switch: makeNodeComponent("_switch"),
+    checkbox: makeNodeComponent("checkbox"),
     btn: makeNodeComponent("btn"),
 
     // Metadata about props expected for PlasmicPodcasterForm

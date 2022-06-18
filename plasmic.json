@@ -78,7 +78,8 @@
           "name": "Slider",
           "componentImportPath": "react-slick"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     },
     {
       "projectId": "28Ba3BDvRe7EiWdfFNnLB6",
@@ -217,7 +218,8 @@
           "name": "Tabs",
           "componentImportPath": "@plasmicpkgs/antd"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     },
     {
       "projectId": "sx3ERcdAG6itf9PoNvoQTY",
@@ -837,6 +839,20 @@
           "scheme": "blackbox",
           "componentType": "component",
           "plumeType": "switch"
+        },
+        {
+          "id": "4aFWKT-1DBY",
+          "name": "Checkbox",
+          "type": "managed",
+          "projectId": "sx3ERcdAG6itf9PoNvoQTY",
+          "renderModuleFilePath": "plasmic/the_boss_web_s/PlasmicCheckbox.tsx",
+          "importSpec": {
+            "modulePath": "Checkbox.tsx"
+          },
+          "cssFilePath": "plasmic/the_boss_web_s/PlasmicCheckbox.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "checkbox"
         }
       ],
       "icons": [
@@ -1294,6 +1310,21 @@
           "id": "RHaJzRh4Y",
           "name": "LogoBlackOnWhiteBgsvgIcon",
           "moduleFilePath": "plasmic/the_boss_web_s/icons/PlasmicIcon__LogoBlackOnWhiteBgsvg.tsx"
+        },
+        {
+          "id": "hAMUfodyNqh",
+          "name": "SquaresvgIcon",
+          "moduleFilePath": "plasmic/the_boss_web_s/icons/PlasmicIcon__Squaresvg.tsx"
+        },
+        {
+          "id": "NpzDXQZOcys",
+          "name": "SquareCheckFilledsvgIcon",
+          "moduleFilePath": "plasmic/the_boss_web_s/icons/PlasmicIcon__SquareCheckFilledsvg.tsx"
+        },
+        {
+          "id": "YzZPnlTI1C6",
+          "name": "SquareMinussvgIcon",
+          "moduleFilePath": "plasmic/the_boss_web_s/icons/PlasmicIcon__SquareMinussvg.tsx"
         }
       ],
       "images": [
