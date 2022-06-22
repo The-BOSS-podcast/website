@@ -34,7 +34,6 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import Input from "antd/lib/input"; // plasmic-import: tO9wrxr8Nbb/codeComponent
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -47,23 +46,31 @@ export type PlasmicSubscribeCom__VariantsArgs = {};
 type VariantPropType = keyof PlasmicSubscribeCom__VariantsArgs;
 export const PlasmicSubscribeCom__VariantProps = new Array<VariantPropType>();
 
-export type PlasmicSubscribeCom__ArgsType = {};
+export type PlasmicSubscribeCom__ArgsType = {
+  subsEmailProp?: string;
+};
+
 type ArgPropType = keyof PlasmicSubscribeCom__ArgsType;
-export const PlasmicSubscribeCom__ArgProps = new Array<ArgPropType>();
+export const PlasmicSubscribeCom__ArgProps = new Array<ArgPropType>(
+  "subsEmailProp"
+);
 
 export type PlasmicSubscribeCom__OverridesType = {
   root?: p.Flex<"div">;
   form?: p.Flex<"form">;
-  subsEmailInput?: p.Flex<typeof Input>;
+  subsEmailInput2?: p.Flex<"input">;
   btnCtaPrimary?: p.Flex<"button">;
 };
 
 export interface DefaultSubscribeComProps {
+  subsEmailProp?: string;
   className?: string;
 }
 
 export const defaultSubscribeCom__Args: Partial<PlasmicSubscribeCom__ArgsType> =
-  {};
+  {
+    subsEmailProp: "" as const
+  };
 
 function PlasmicSubscribeCom__RenderFunc(props: {
   variants: PlasmicSubscribeCom__VariantsArgs;
@@ -128,16 +135,25 @@ function PlasmicSubscribeCom__RenderFunc(props: {
           method={"post" as const}
           name={"newsletter-subs" as const}
         >
-          <Input
-            data-plasmic-name={"subsEmailInput"}
-            data-plasmic-override={overrides.subsEmailInput}
-            allowClear={false}
-            aria-label={"" as const}
-            className={classNames("__wab_instance", sty.subsEmailInput)}
-            id={"subs_email" as const}
+
+          <input
+            data-plasmic-name={"subsEmailInput2"}
+            data-plasmic-override={overrides.subsEmailInput2}
+            aria-label={"enter your email here" as const}
+            aria-labelledby={"" as const}
+            autoComplete={"email" as const}
+            className={classNames(
+              projectcss.all,
+              projectcss.input,
+              sty.subsEmailInput2
+            )}
+            id={"subs-email" as const}
             name={"subs_email" as const}
+            onChange={"" as const}
             placeholder={"Your Email" as const}
-            type={"" as const}
+            size={undefined}
+            type={"email" as const}
+            value={args.subsEmailProp}
           />
 
           <p.Stack
@@ -150,6 +166,7 @@ function PlasmicSubscribeCom__RenderFunc(props: {
               projectcss.button,
               sty.btnCtaPrimary
             )}
+            type={"submit" as const}
           >
             <div
               className={classNames(
@@ -168,9 +185,9 @@ function PlasmicSubscribeCom__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "form", "subsEmailInput", "btnCtaPrimary"],
-  form: ["form", "subsEmailInput", "btnCtaPrimary"],
-  subsEmailInput: ["subsEmailInput"],
+  root: ["root", "form", "subsEmailInput2", "btnCtaPrimary"],
+  form: ["form", "subsEmailInput2", "btnCtaPrimary"],
+  subsEmailInput2: ["subsEmailInput2"],
   btnCtaPrimary: ["btnCtaPrimary"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -179,7 +196,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   form: "form";
-  subsEmailInput: typeof Input;
+  subsEmailInput2: "input";
   btnCtaPrimary: "button";
 };
 
@@ -241,7 +258,7 @@ export const PlasmicSubscribeCom = Object.assign(
   {
     // Helper components rendering sub-elements
     form: makeNodeComponent("form"),
-    subsEmailInput: makeNodeComponent("subsEmailInput"),
+    subsEmailInput2: makeNodeComponent("subsEmailInput2"),
     btnCtaPrimary: makeNodeComponent("btnCtaPrimary"),
 
     // Metadata about props expected for PlasmicSubscribeCom
