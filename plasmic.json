@@ -853,6 +853,20 @@
           "scheme": "blackbox",
           "componentType": "component",
           "plumeType": "checkbox"
+        },
+        {
+          "id": "EcDuALfQrR7",
+          "name": "TextInput",
+          "type": "managed",
+          "projectId": "sx3ERcdAG6itf9PoNvoQTY",
+          "renderModuleFilePath": "plasmic/the_boss_web_s/PlasmicTextInput.tsx",
+          "importSpec": {
+            "modulePath": "TextInput.tsx"
+          },
+          "cssFilePath": "plasmic/the_boss_web_s/PlasmicTextInput.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "text-input"
         }
       ],
       "icons": [
@@ -1325,6 +1339,16 @@
           "id": "YzZPnlTI1C6",
           "name": "SquareMinussvgIcon",
           "moduleFilePath": "plasmic/the_boss_web_s/icons/PlasmicIcon__SquareMinussvg.tsx"
+        },
+        {
+          "id": "BNbve7ih2Zx",
+          "name": "SearchsvgIcon",
+          "moduleFilePath": "plasmic/the_boss_web_s/icons/PlasmicIcon__Searchsvg.tsx"
+        },
+        {
+          "id": "9hf1iSuvU2h",
+          "name": "ChecksvgIcon",
+          "moduleFilePath": "plasmic/the_boss_web_s/icons/PlasmicIcon__Checksvg.tsx"
         }
       ],
       "images": [
