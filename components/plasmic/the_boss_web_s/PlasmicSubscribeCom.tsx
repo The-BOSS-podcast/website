@@ -135,6 +135,7 @@ function PlasmicSubscribeCom__RenderFunc(props: {
           method={"post" as const}
           name={"newsletter-subs" as const}
         >
+
           <input
             data-plasmic-name={"subsEmailInput2"}
             data-plasmic-override={overrides.subsEmailInput2}
