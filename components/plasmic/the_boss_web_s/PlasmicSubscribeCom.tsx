@@ -148,7 +148,7 @@ function PlasmicSubscribeCom__RenderFunc(props: {
             )}
             id={"subs-email" as const}
             name={"subs_email" as const}
-            onChange={"{set(subs_email)}" as const}
+            onChange={"" as const}
             placeholder={"Your Email" as const}
             size={undefined}
             type={"email" as const}

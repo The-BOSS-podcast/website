@@ -155,12 +155,12 @@
         {
           "type": "renderModule",
           "assetId": "2a3pU-rBM-T",
-          "checksum": "47b90a36c0d26f904bf211670b435938"
+          "checksum": "aefe391c719148de70ebdff6d81c22d7"
         },
         {
           "type": "cssRules",
           "assetId": "2a3pU-rBM-T",
-          "checksum": "47b90a36c0d26f904bf211670b435938"
+          "checksum": "aefe391c719148de70ebdff6d81c22d7"
         },
         {
           "type": "renderModule",
@@ -2063,11 +2063,6 @@
           "checksum": "65e44ef086fd01d251d21bdfad704cc5"
         },
         {
-          "assetId": "sx3ERcdAG6itf9PoNvoQTY",
-          "type": "projectCss",
-          "checksum": "963e25bbbb5c8905a75157221246f6f5"
-        },
-        {
           "type": "renderModule",
           "assetId": "EcDuALfQrR7",
           "checksum": "2d73b9483d32191a8f43d919175e2692"
@@ -2086,6 +2081,11 @@
           "type": "icon",
           "assetId": "9hf1iSuvU2h",
           "checksum": "5e66d18204a83bb8da7537375e488596"
+        },
+        {
+          "assetId": "sx3ERcdAG6itf9PoNvoQTY",
+          "type": "projectCss",
+          "checksum": "963e25bbbb5c8905a75157221246f6f5"
         }
       ],
       "codegenVersion": "0.0.1"
