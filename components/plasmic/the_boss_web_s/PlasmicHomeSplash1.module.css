@@ -50,8 +50,8 @@
     left: auto;
     top: auto;
     align-self: center;
-    height: 100vh;
-    flex-shrink: 0;
+    height: auto;
+    padding: var(--token-c44v_bqJM);
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -102,6 +102,11 @@
   > picture
   > img {
   margin-top: var(--token-U5AyfKMKn);
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__spkxa {
+    margin-top: var(--token-3Pes5trxZ) !important;
+  }
 }
 .freeBox__rbcvE {
   display: flex;

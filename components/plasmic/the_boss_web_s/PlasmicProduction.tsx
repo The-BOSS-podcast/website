@@ -221,24 +221,6 @@ function PlasmicProduction__RenderFunc(props: {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox__eJvW)}
               >
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img__pac5K)}
-                  displayHeight={"165px" as const}
-                  displayMaxHeight={"none" as const}
-                  displayMaxWidth={"100%" as const}
-                  displayMinHeight={"0" as const}
-                  displayMinWidth={"0" as const}
-                  displayWidth={"186.738px" as const}
-                  loading={"lazy" as const}
-                  src={{
-                    src: "/plasmic/the_boss_web_s/images/emoji3.svg",
-                    fullWidth: 186.738,
-                    fullHeight: 165,
-                    aspectRatio: 1.133333
-                  }}
-                />
-
                 <div
                   className={classNames(
                     projectcss.all,
@@ -362,24 +344,6 @@ function PlasmicProduction__RenderFunc(props: {
                     </p.Stack>
                   </p.Stack>
                 </p.Stack>
-
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img__qsaRp)}
-                  displayHeight={"180px" as const}
-                  displayMaxHeight={"none" as const}
-                  displayMaxWidth={"100%" as const}
-                  displayMinHeight={"0" as const}
-                  displayMinWidth={"0" as const}
-                  displayWidth={"180px" as const}
-                  loading={"lazy" as const}
-                  src={{
-                    src: "/plasmic/the_boss_web_s/images/emoji4.svg",
-                    fullWidth: 180,
-                    fullHeight: 180,
-                    aspectRatio: 1
-                  }}
-                />
               </p.Stack>
 
               {true ? (

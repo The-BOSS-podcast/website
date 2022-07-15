@@ -12,6 +12,14 @@
 .root > :global(.__wab_flex-container) {
   flex-direction: column;
   min-width: 0;
+  margin-top: calc(0px - var(--token-c44v_bqJM));
+  height: calc(100% + var(--token-c44v_bqJM));
+}
+.root > :global(.__wab_flex-container) > *,
+.root > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.root > :global(.__wab_flex-container) > picture > img,
+.root > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
+  margin-top: var(--token-c44v_bqJM);
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .root {
@@ -49,7 +57,6 @@
 .text___5R1Wn {
   display: block;
   font-size: 28px;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 100%;
@@ -74,8 +81,7 @@
   display: block;
   font-size: 28px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 100%;
   color: rgba(224, 224, 224, 1);

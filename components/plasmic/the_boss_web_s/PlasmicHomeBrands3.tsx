@@ -137,7 +137,7 @@ function PlasmicHomeBrands3__RenderFunc(props: {
               sty.text__dYBn
             )}
           >
-            {"Emerging brands we work with"}
+            {"emerging brands we work with"}
           </div>
         </div>
       ) : null}
