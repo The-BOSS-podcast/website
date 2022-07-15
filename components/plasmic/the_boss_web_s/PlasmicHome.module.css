@@ -75,7 +75,7 @@
   .freeBox {
     display: flex;
     flex-direction: column;
-    background: rgba(35, 35, 34, 1);
+    background: none;
     width: 100%;
     height: auto;
     overflow: hidden;

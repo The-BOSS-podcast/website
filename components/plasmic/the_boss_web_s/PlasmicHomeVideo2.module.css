@@ -140,11 +140,11 @@
     0% 0% / 100% 100% no-repeat;
   width: 64px;
   height: 64px;
-  display: block;
   position: absolute;
   top: 128px;
   left: 238px;
   overflow: hidden;
+  display: none;
   border-radius: 100px;
 }
 .svg {

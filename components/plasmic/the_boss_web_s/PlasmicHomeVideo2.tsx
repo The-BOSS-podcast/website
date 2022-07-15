@@ -152,18 +152,20 @@ function PlasmicHomeVideo2__RenderFunc(props: {
               className={classNames(projectcss.all, sty.rectangle35)}
             />
 
-            <div
-              data-plasmic-name={"frame2"}
-              data-plasmic-override={overrides.frame2}
-              className={classNames(projectcss.all, sty.frame2)}
-            >
-              <PlayArrowIcon
-                data-plasmic-name={"svg"}
-                data-plasmic-override={overrides.svg}
-                className={classNames(projectcss.all, sty.svg)}
-                role={"img"}
-              />
-            </div>
+            {true ? (
+              <div
+                data-plasmic-name={"frame2"}
+                data-plasmic-override={overrides.frame2}
+                className={classNames(projectcss.all, sty.frame2)}
+              >
+                <PlayArrowIcon
+                  data-plasmic-name={"svg"}
+                  data-plasmic-override={overrides.svg}
+                  className={classNames(projectcss.all, sty.svg)}
+                  role={"img"}
+                />
+              </div>
+            ) : null}
           </div>
 
           {true ? (
