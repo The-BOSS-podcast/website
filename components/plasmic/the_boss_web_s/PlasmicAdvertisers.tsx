@@ -79,9 +79,6 @@ export type PlasmicAdvertisers__OverridesType = {
 
 export interface DefaultAdvertisersProps {}
 
-export const defaultAdvertisers__Args: Partial<PlasmicAdvertisers__ArgsType> =
-  {};
-
 function PlasmicAdvertisers__RenderFunc(props: {
   variants: PlasmicAdvertisers__VariantsArgs;
   args: PlasmicAdvertisers__ArgsType;
@@ -90,9 +87,19 @@ function PlasmicAdvertisers__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultAdvertisers__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -105,9 +112,27 @@ function PlasmicAdvertisers__RenderFunc(props: {
         <title key="title">{"Advertisers"}</title>
         <meta key="og:title" property="og:title" content={"Advertisers"} />
         <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={"Advertisers"}
+        />
+        <meta
           key="description"
-          property="og:description"
           name="description"
+          content={
+            "The BOSS Media connects advertisers to podcasters and helps brands to advertise on India’s best podcasts"
+          }
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={
+            "The BOSS Media connects advertisers to podcasters and helps brands to advertise on India’s best podcasts"
+          }
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
           content={
             "The BOSS Media connects advertisers to podcasters and helps brands to advertise on India’s best podcasts"
           }
@@ -295,12 +320,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicAdvertisers__ArgProps,
-      internalVariantPropNames: PlasmicAdvertisers__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicAdvertisers__ArgProps,
+          internalVariantPropNames: PlasmicAdvertisers__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicAdvertisers__RenderFunc({
       variants,

@@ -87,9 +87,6 @@ export interface DefaultGuestShowcaseCompProps {
   className?: string;
 }
 
-export const defaultGuestShowcaseComp__Args: Partial<PlasmicGuestShowcaseComp__ArgsType> =
-  {};
-
 function PlasmicGuestShowcaseComp__RenderFunc(props: {
   variants: PlasmicGuestShowcaseComp__VariantsArgs;
   args: PlasmicGuestShowcaseComp__ArgsType;
@@ -98,9 +95,19 @@ function PlasmicGuestShowcaseComp__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultGuestShowcaseComp__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   return (
     <div
@@ -320,12 +327,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicGuestShowcaseComp__ArgProps,
-      internalVariantPropNames: PlasmicGuestShowcaseComp__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicGuestShowcaseComp__ArgProps,
+          internalVariantPropNames: PlasmicGuestShowcaseComp__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicGuestShowcaseComp__RenderFunc({
       variants,

@@ -98,8 +98,6 @@ export interface DefaultHomeBlog4Props {
   className?: string;
 }
 
-export const defaultHomeBlog4__Args: Partial<PlasmicHomeBlog4__ArgsType> = {};
-
 function PlasmicHomeBlog4__RenderFunc(props: {
   variants: PlasmicHomeBlog4__VariantsArgs;
   args: PlasmicHomeBlog4__ArgsType;
@@ -108,9 +106,19 @@ function PlasmicHomeBlog4__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultHomeBlog4__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -1199,12 +1207,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicHomeBlog4__ArgProps,
-      internalVariantPropNames: PlasmicHomeBlog4__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicHomeBlog4__ArgProps,
+          internalVariantPropNames: PlasmicHomeBlog4__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicHomeBlog4__RenderFunc({
       variants,

@@ -198,7 +198,6 @@
 .text__mqRe {
   display: block;
   font-size: 20px;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 700;
   letter-spacing: 0em;
   line-height: 100%;
@@ -207,7 +206,6 @@
 .text__nA8Y {
   display: block;
   font-size: 16px;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
@@ -250,17 +248,16 @@
 .text__lpekQ {
   display: block;
   font-size: 14px;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
   color: rgba(239, 239, 239, 1);
   position: relative;
+  font-family: "Merriweather Sans", sans-serif;
 }
 .text__fdLc {
   display: block;
   font-size: 16px;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 18px;
@@ -269,7 +266,7 @@
 .text__fy2Vo {
   display: block;
   font-size: 14px;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 18px;
@@ -355,7 +352,6 @@
 .text__v5WpT {
   display: block;
   font-size: 18px;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 700;
   letter-spacing: 0em;
   line-height: 100%;
@@ -394,7 +390,6 @@
 .link__r0Q3P {
   display: block;
   font-size: 14px;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;
@@ -404,7 +399,6 @@
 .link___9UxdF {
   display: block;
   font-size: 14px;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;
@@ -414,7 +408,6 @@
 .link__axAi4 {
   display: block;
   font-size: 14px;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;
@@ -424,7 +417,6 @@
 .link__yNmxG {
   display: block;
   font-size: 14px;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;
@@ -434,7 +426,6 @@
 .link__jPb0Y {
   display: block;
   font-size: 14px;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;
@@ -444,7 +435,6 @@
 .link__x2G5 {
   display: block;
   font-size: 14px;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;
@@ -507,7 +497,6 @@
 .text__qVqex {
   display: block;
   font-size: 18px;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 700;
   letter-spacing: 0em;
   line-height: 100%;
@@ -564,7 +553,6 @@
 .link__eDhVz {
   display: block;
   font-size: 14px;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;
@@ -574,7 +562,6 @@
 .link___0SXiH {
   display: block;
   font-size: 14px;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;
@@ -584,7 +571,6 @@
 .link__hPs01 {
   display: block;
   font-size: 14px;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;
@@ -595,7 +581,10 @@
   position: relative;
   top: auto;
   left: auto;
-  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  align-self: center;
+  min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .subscribeCom:global(.__wab_instance) {
@@ -670,7 +659,7 @@
   display: block;
   font-size: 12px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;

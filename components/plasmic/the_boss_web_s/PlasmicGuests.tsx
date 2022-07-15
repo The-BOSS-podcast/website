@@ -73,8 +73,6 @@ export type PlasmicGuests__OverridesType = {
 
 export interface DefaultGuestsProps {}
 
-export const defaultGuests__Args: Partial<PlasmicGuests__ArgsType> = {};
-
 function PlasmicGuests__RenderFunc(props: {
   variants: PlasmicGuests__VariantsArgs;
   args: PlasmicGuests__ArgsType;
@@ -83,9 +81,19 @@ function PlasmicGuests__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultGuests__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -97,10 +105,24 @@ function PlasmicGuests__RenderFunc(props: {
         <meta name="twitter:card" content="summary" />
         <title key="title">{"Guests"}</title>
         <meta key="og:title" property="og:title" content={"Guests"} />
+        <meta key="twitter:title" name="twitter:title" content={"Guests"} />
         <meta
           key="description"
-          property="og:description"
           name="description"
+          content={
+            "The Balls Of Steel Show hosts unheard entrepreneurial stories and spectacular business mindset of every entrepreneur in the crowd"
+          }
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={
+            "The Balls Of Steel Show hosts unheard entrepreneurial stories and spectacular business mindset of every entrepreneur in the crowd"
+          }
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
           content={
             "The Balls Of Steel Show hosts unheard entrepreneurial stories and spectacular business mindset of every entrepreneur in the crowd"
           }
@@ -258,12 +280,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicGuests__ArgProps,
-      internalVariantPropNames: PlasmicGuests__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicGuests__ArgProps,
+          internalVariantPropNames: PlasmicGuests__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicGuests__RenderFunc({
       variants,

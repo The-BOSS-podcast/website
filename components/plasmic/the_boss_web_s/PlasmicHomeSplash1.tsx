@@ -65,9 +65,6 @@ export interface DefaultHomeSplash1Props {
   className?: string;
 }
 
-export const defaultHomeSplash1__Args: Partial<PlasmicHomeSplash1__ArgsType> =
-  {};
-
 function PlasmicHomeSplash1__RenderFunc(props: {
   variants: PlasmicHomeSplash1__VariantsArgs;
   args: PlasmicHomeSplash1__ArgsType;
@@ -76,9 +73,19 @@ function PlasmicHomeSplash1__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultHomeSplash1__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -132,7 +139,37 @@ function PlasmicHomeSplash1__RenderFunc(props: {
                       sty.text__oySyr
                     )}
                   >
-                    {"A Place Where Brands Advertise\nAnd Podcasters Monetize"}
+                    <React.Fragment>
+                      <React.Fragment>{"a place where "}</React.Fragment>
+                      {
+                        <span
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.span,
+                            projectcss.__wab_text,
+                            projectcss.plasmic_default__inline,
+                            sty.span__rM4Iv
+                          )}
+                        >
+                          {"brands advertize"}
+                        </span>
+                      }
+                      <React.Fragment>{"\nand "}</React.Fragment>
+                      {
+                        <span
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.span,
+                            projectcss.__wab_text,
+                            projectcss.plasmic_default__inline,
+                            sty.span__u3U5B
+                          )}
+                        >
+                          {"podcasters monetize"}
+                        </span>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
                   </div>
                 </div>
               ) : null}
@@ -265,12 +302,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicHomeSplash1__ArgProps,
-      internalVariantPropNames: PlasmicHomeSplash1__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicHomeSplash1__ArgProps,
+          internalVariantPropNames: PlasmicHomeSplash1__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicHomeSplash1__RenderFunc({
       variants,

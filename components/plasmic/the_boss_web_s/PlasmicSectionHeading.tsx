@@ -70,9 +70,6 @@ export interface DefaultSectionHeadingProps {
   className?: string;
 }
 
-export const defaultSectionHeading__Args: Partial<PlasmicSectionHeading__ArgsType> =
-  {};
-
 function PlasmicSectionHeading__RenderFunc(props: {
   variants: PlasmicSectionHeading__VariantsArgs;
   args: PlasmicSectionHeading__ArgsType;
@@ -81,9 +78,19 @@ function PlasmicSectionHeading__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultSectionHeading__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -176,12 +183,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicSectionHeading__ArgProps,
-      internalVariantPropNames: PlasmicSectionHeading__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicSectionHeading__ArgProps,
+          internalVariantPropNames: PlasmicSectionHeading__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicSectionHeading__RenderFunc({
       variants,

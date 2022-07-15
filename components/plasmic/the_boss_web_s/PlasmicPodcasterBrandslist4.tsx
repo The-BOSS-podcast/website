@@ -64,9 +64,6 @@ export interface DefaultPodcasterBrandslist4Props {
   className?: string;
 }
 
-export const defaultPodcasterBrandslist4__Args: Partial<PlasmicPodcasterBrandslist4__ArgsType> =
-  {};
-
 function PlasmicPodcasterBrandslist4__RenderFunc(props: {
   variants: PlasmicPodcasterBrandslist4__VariantsArgs;
   args: PlasmicPodcasterBrandslist4__ArgsType;
@@ -75,9 +72,19 @@ function PlasmicPodcasterBrandslist4__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultPodcasterBrandslist4__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   return (
     <p.Stack
@@ -185,12 +192,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicPodcasterBrandslist4__ArgProps,
-      internalVariantPropNames: PlasmicPodcasterBrandslist4__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicPodcasterBrandslist4__ArgProps,
+          internalVariantPropNames: PlasmicPodcasterBrandslist4__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicPodcasterBrandslist4__RenderFunc({
       variants,

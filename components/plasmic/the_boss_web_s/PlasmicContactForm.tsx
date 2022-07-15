@@ -74,10 +74,6 @@ export interface DefaultContactFormProps {
   className?: string;
 }
 
-export const defaultContactForm__Args: Partial<PlasmicContactForm__ArgsType> = {
-  lastNameValue: "" as const
-};
-
 function PlasmicContactForm__RenderFunc(props: {
   variants: PlasmicContactForm__VariantsArgs;
   args: PlasmicContactForm__ArgsType;
@@ -86,9 +82,20 @@ function PlasmicContactForm__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultContactForm__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {
+          lastNameValue: "" as const
+        },
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -373,12 +380,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicContactForm__ArgProps,
-      internalVariantPropNames: PlasmicContactForm__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicContactForm__ArgProps,
+          internalVariantPropNames: PlasmicContactForm__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicContactForm__RenderFunc({
       variants,

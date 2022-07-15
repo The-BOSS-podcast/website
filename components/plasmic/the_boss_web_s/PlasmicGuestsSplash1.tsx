@@ -52,15 +52,13 @@ export const PlasmicGuestsSplash1__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicGuestsSplash1__OverridesType = {
   root?: p.Flex<"div">;
+  span?: p.Flex<"span">;
   btnCtaPrimary12?: p.Flex<"div">;
 };
 
 export interface DefaultGuestsSplash1Props {
   className?: string;
 }
-
-export const defaultGuestsSplash1__Args: Partial<PlasmicGuestsSplash1__ArgsType> =
-  {};
 
 function PlasmicGuestsSplash1__RenderFunc(props: {
   variants: PlasmicGuestsSplash1__VariantsArgs;
@@ -70,9 +68,19 @@ function PlasmicGuestsSplash1__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultGuestsSplash1__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   return (
     <div
@@ -165,7 +173,25 @@ function PlasmicGuestsSplash1__RenderFunc(props: {
                   sty.text___7Lgj6
                 )}
               >
-                {"Meet our Guests"}
+                <React.Fragment>
+                  <React.Fragment>{""}</React.Fragment>
+                  {
+                    <span
+                      data-plasmic-name={"span"}
+                      data-plasmic-override={overrides.span}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.span,
+                        projectcss.__wab_text,
+                        projectcss.plasmic_default__inline,
+                        sty.span
+                      )}
+                    >
+                      {"meet"}
+                    </span>
+                  }
+                  <React.Fragment>{" our guests"}</React.Fragment>
+                </React.Fragment>
               </div>
 
               <div
@@ -267,7 +293,8 @@ function PlasmicGuestsSplash1__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "btnCtaPrimary12"],
+  root: ["root", "span", "btnCtaPrimary12"],
+  span: ["span"],
   btnCtaPrimary12: ["btnCtaPrimary12"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -275,6 +302,7 @@ type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  span: "span";
   btnCtaPrimary12: "div";
 };
 
@@ -308,12 +336,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicGuestsSplash1__ArgProps,
-      internalVariantPropNames: PlasmicGuestsSplash1__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicGuestsSplash1__ArgProps,
+          internalVariantPropNames: PlasmicGuestsSplash1__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicGuestsSplash1__RenderFunc({
       variants,
@@ -335,6 +367,7 @@ export const PlasmicGuestsSplash1 = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    span: makeNodeComponent("span"),
     btnCtaPrimary12: makeNodeComponent("btnCtaPrimary12"),
 
     // Metadata about props expected for PlasmicGuestsSplash1

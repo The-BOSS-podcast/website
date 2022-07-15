@@ -89,7 +89,6 @@
   display: block;
   font-size: 48px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 56px;
@@ -98,11 +97,19 @@
   left: auto;
   bottom: auto;
 }
+.span__mcl9J {
+  color: var(--token-512meMn8y);
+}
+.span__yYhMm {
+  color: var(--token-512meMn8y);
+}
+.span___1Rf3O {
+  color: var(--token-512meMn8y);
+}
 .text__fqOGx {
   display: block;
   font-size: 18px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 24px;
@@ -160,7 +167,7 @@
 .text__o5YHc {
   display: block;
   font-size: 16px;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
@@ -194,7 +201,7 @@
 .text__eby0Y {
   display: block;
   font-size: 16px;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;

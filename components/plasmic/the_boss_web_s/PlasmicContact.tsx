@@ -75,8 +75,6 @@ export type PlasmicContact__OverridesType = {
 
 export interface DefaultContactProps {}
 
-export const defaultContact__Args: Partial<PlasmicContact__ArgsType> = {};
-
 function PlasmicContact__RenderFunc(props: {
   variants: PlasmicContact__VariantsArgs;
   args: PlasmicContact__ArgsType;
@@ -85,9 +83,19 @@ function PlasmicContact__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultContact__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -100,9 +108,27 @@ function PlasmicContact__RenderFunc(props: {
         <title key="title">{"Contact The BOSS"}</title>
         <meta key="og:title" property="og:title" content={"Contact The BOSS"} />
         <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={"Contact The BOSS"}
+        />
+        <meta
           key="description"
-          property="og:description"
           name="description"
+          content={
+            "Want to monetize your podcast or want to advertise your brand on podcasts? Connect with us to fulfil all your podcast monetization needs.\n"
+          }
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={
+            "Want to monetize your podcast or want to advertise your brand on podcasts? Connect with us to fulfil all your podcast monetization needs.\n"
+          }
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
           content={
             "Want to monetize your podcast or want to advertise your brand on podcasts? Connect with us to fulfil all your podcast monetization needs.\n"
           }
@@ -153,7 +179,7 @@ function PlasmicContact__RenderFunc(props: {
                       sty.text__iDdK6
                     )}
                   >
-                    {"Contact The BOSS"}
+                    {"contact the BOSS"}
                   </div>
                 </div>
               ) : null}
@@ -172,7 +198,7 @@ function PlasmicContact__RenderFunc(props: {
                           sty.text__tzRw7
                         )}
                       >
-                        {"Getting in touch is easy"}
+                        {"getting in touch is easy"}
                       </div>
 
                       <div
@@ -208,7 +234,7 @@ function PlasmicContact__RenderFunc(props: {
                               sty.text__sD5EE
                             )}
                           >
-                            {"Social links"}
+                            {"social links"}
                           </div>
 
                           <p.Stack
@@ -350,7 +376,7 @@ function PlasmicContact__RenderFunc(props: {
                               sty.text__en442
                             )}
                           >
-                            {"Mail us at"}
+                            {"mail us at"}
                           </div>
 
                           <div
@@ -462,12 +488,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicContact__ArgProps,
-      internalVariantPropNames: PlasmicContact__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicContact__ArgProps,
+          internalVariantPropNames: PlasmicContact__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicContact__RenderFunc({
       variants,

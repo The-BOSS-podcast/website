@@ -67,11 +67,6 @@ export interface DefaultSubscribeComProps {
   className?: string;
 }
 
-export const defaultSubscribeCom__Args: Partial<PlasmicSubscribeCom__ArgsType> =
-  {
-    subsEmailProp: "" as const
-  };
-
 function PlasmicSubscribeCom__RenderFunc(props: {
   variants: PlasmicSubscribeCom__VariantsArgs;
   args: PlasmicSubscribeCom__ArgsType;
@@ -80,9 +75,20 @@ function PlasmicSubscribeCom__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultSubscribeCom__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {
+          subsEmailProp: "" as const
+        },
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   return (
     <p.Stack
@@ -135,7 +141,6 @@ function PlasmicSubscribeCom__RenderFunc(props: {
           method={"post" as const}
           name={"newsletter-subs" as const}
         >
-
           <input
             data-plasmic-name={"subsEmailInput2"}
             data-plasmic-override={overrides.subsEmailInput2}
@@ -230,12 +235,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicSubscribeCom__ArgProps,
-      internalVariantPropNames: PlasmicSubscribeCom__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicSubscribeCom__ArgProps,
+          internalVariantPropNames: PlasmicSubscribeCom__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicSubscribeCom__RenderFunc({
       variants,

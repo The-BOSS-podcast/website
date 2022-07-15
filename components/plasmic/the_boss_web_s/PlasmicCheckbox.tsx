@@ -95,8 +95,6 @@ export interface DefaultCheckboxProps extends pp.CheckboxProps {
   "aria-labelledby"?: string;
 }
 
-export const defaultCheckbox__Args: Partial<PlasmicCheckbox__ArgsType> = {};
-
 function PlasmicCheckbox__RenderFunc(props: {
   variants: PlasmicCheckbox__VariantsArgs;
   args: PlasmicCheckbox__ArgsType;
@@ -105,9 +103,19 @@ function PlasmicCheckbox__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultCheckbox__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const [isRootFocusVisibleWithin, triggerRootFocusVisibleWithinProps] =
     useTrigger("useFocusVisibleWithin", {
@@ -344,12 +352,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicCheckbox__ArgProps,
-      internalVariantPropNames: PlasmicCheckbox__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicCheckbox__ArgProps,
+          internalVariantPropNames: PlasmicCheckbox__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicCheckbox__RenderFunc({
       variants,

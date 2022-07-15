@@ -59,8 +59,6 @@ export interface DefaultBrandlistProps {
   className?: string;
 }
 
-export const defaultBrandlist__Args: Partial<PlasmicBrandlist__ArgsType> = {};
-
 function PlasmicBrandlist__RenderFunc(props: {
   variants: PlasmicBrandlist__VariantsArgs;
   args: PlasmicBrandlist__ArgsType;
@@ -69,9 +67,19 @@ function PlasmicBrandlist__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultBrandlist__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   return (
     true ? (
@@ -429,12 +437,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicBrandlist__ArgProps,
-      internalVariantPropNames: PlasmicBrandlist__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicBrandlist__ArgProps,
+          internalVariantPropNames: PlasmicBrandlist__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicBrandlist__RenderFunc({
       variants,

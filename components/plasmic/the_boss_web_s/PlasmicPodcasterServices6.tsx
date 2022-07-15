@@ -111,9 +111,6 @@ export interface DefaultPodcasterServices6Props {
   className?: string;
 }
 
-export const defaultPodcasterServices6__Args: Partial<PlasmicPodcasterServices6__ArgsType> =
-  {};
-
 function PlasmicPodcasterServices6__RenderFunc(props: {
   variants: PlasmicPodcasterServices6__VariantsArgs;
   args: PlasmicPodcasterServices6__ArgsType;
@@ -122,9 +119,19 @@ function PlasmicPodcasterServices6__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultPodcasterServices6__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -925,12 +932,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicPodcasterServices6__ArgProps,
-      internalVariantPropNames: PlasmicPodcasterServices6__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicPodcasterServices6__ArgProps,
+          internalVariantPropNames: PlasmicPodcasterServices6__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicPodcasterServices6__RenderFunc({
       variants,

@@ -22,7 +22,7 @@
 }
 .rectangle44 {
   flex-direction: row;
-  background: none;
+  background: url("/plasmic/the_boss_web_s/images/dotPattern2Png.png") top 50% left 50% / cover repeat;
   width: 100%;
   height: 100%;
   display: flex;
@@ -135,14 +135,20 @@
 }
 .text__oySyr {
   display: block;
-  font-size: 48px;
+  font-size: 54px;
   text-align: center;
-  font-family: "Heebo", sans-serif;
+  font-family: "Gilroy";
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 62.4px;
   color: rgba(239, 239, 239, 1);
   transform: translate(-0.5px, 0px);
+}
+.span__rM4Iv {
+  color: var(--token-512meMn8y);
+}
+.span__u3U5B {
+  color: var(--token-512meMn8y);
 }
 .frame39 {
   flex-direction: row;
@@ -206,12 +212,13 @@
   flex-direction: row;
   background: rgba(51, 50, 50, 1);
   width: auto;
-  height: 48px;
+  height: 3rem;
   display: flex;
   position: relative;
   overflow: hidden;
   align-self: center;
   text-align: center;
+  font-family: "Merriweather Sans", sans-serif;
   border-radius: 4px;
   padding: 12px 24px;
 }
@@ -235,7 +242,7 @@
 .text__lOgQ {
   display: block;
   font-size: 16px;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
@@ -247,7 +254,7 @@
   flex-direction: row;
   background: rgba(51, 50, 50, 1);
   width: auto;
-  height: 48px;
+  height: 3rem;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -275,7 +282,7 @@
 .text___1SMzL {
   display: block;
   font-size: 16px;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;

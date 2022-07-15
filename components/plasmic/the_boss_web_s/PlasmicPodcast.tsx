@@ -105,8 +105,6 @@ export type PlasmicPodcast__OverridesType = {
 
 export interface DefaultPodcastProps {}
 
-export const defaultPodcast__Args: Partial<PlasmicPodcast__ArgsType> = {};
-
 function PlasmicPodcast__RenderFunc(props: {
   variants: PlasmicPodcast__VariantsArgs;
   args: PlasmicPodcast__ArgsType;
@@ -115,9 +113,19 @@ function PlasmicPodcast__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultPodcast__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -130,9 +138,23 @@ function PlasmicPodcast__RenderFunc(props: {
         <title key="title">{"Our podcast"}</title>
         <meta key="og:title" property="og:title" content={"Our podcast"} />
         <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={"Our podcast"}
+        />
+        <meta
           key="description"
-          property="og:description"
           name="description"
+          content={"Listen to our podcast on multiple streaming platforms."}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={"Listen to our podcast on multiple streaming platforms."}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
           content={"Listen to our podcast on multiple streaming platforms."}
         />
       </Head>
@@ -185,7 +207,7 @@ function PlasmicPodcast__RenderFunc(props: {
                       sty.text
                     )}
                   >
-                    {"Our Podcast"}
+                    {"our podcast"}
                   </div>
                 </div>
               ) : null}
@@ -1105,12 +1127,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicPodcast__ArgProps,
-      internalVariantPropNames: PlasmicPodcast__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicPodcast__ArgProps,
+          internalVariantPropNames: PlasmicPodcast__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicPodcast__RenderFunc({
       variants,

@@ -74,8 +74,6 @@ export type PlasmicAbout__OverridesType = {
 
 export interface DefaultAboutProps {}
 
-export const defaultAbout__Args: Partial<PlasmicAbout__ArgsType> = {};
-
 function PlasmicAbout__RenderFunc(props: {
   variants: PlasmicAbout__VariantsArgs;
   args: PlasmicAbout__ArgsType;
@@ -84,9 +82,19 @@ function PlasmicAbout__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultAbout__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -99,9 +107,27 @@ function PlasmicAbout__RenderFunc(props: {
         <title key="title">{"About The BOSS"}</title>
         <meta key="og:title" property="og:title" content={"About The BOSS"} />
         <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={"About The BOSS"}
+        />
+        <meta
           key="description"
-          property="og:description"
           name="description"
+          content={
+            "The BOSS Media monetizes podcasts by connecting podcasters to advertisers. They run their own business podcast, The Balls Of Steel Show – Dhandho Ni Soch"
+          }
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={
+            "The BOSS Media monetizes podcasts by connecting podcasters to advertisers. They run their own business podcast, The Balls Of Steel Show – Dhandho Ni Soch"
+          }
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
           content={
             "The BOSS Media monetizes podcasts by connecting podcasters to advertisers. They run their own business podcast, The Balls Of Steel Show – Dhandho Ni Soch"
           }
@@ -155,7 +181,7 @@ function PlasmicAbout__RenderFunc(props: {
                       sty.h1
                     )}
                   >
-                    {"About The BOSS"}
+                    {"about the BOSS"}
                   </h1>
                 </div>
               ) : null}
@@ -198,7 +224,7 @@ function PlasmicAbout__RenderFunc(props: {
                             sty.h3__aoPmp
                           )}
                         >
-                          {"Listen to our Podcast"}
+                          {"listen to our podcast"}
                         </h3>
 
                         <p.Stack
@@ -260,7 +286,7 @@ function PlasmicAbout__RenderFunc(props: {
                             sty.h3__bUiVp
                           )}
                         >
-                          {"Visit our Content House"}
+                          {"visit our content house"}
                         </h3>
 
                         <p.Stack
@@ -311,7 +337,7 @@ function PlasmicAbout__RenderFunc(props: {
                           sty.h2__lLvKl
                         )}
                       >
-                        {"How BOSS started?"}
+                        {"how BOSS started ?"}
                       </h2>
 
                       <div
@@ -347,7 +373,7 @@ function PlasmicAbout__RenderFunc(props: {
                           sty.h2__mYZqa
                         )}
                       >
-                        {"What we do"}
+                        {"what we do ?"}
                       </h2>
 
                       <div
@@ -489,12 +515,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicAbout__ArgProps,
-      internalVariantPropNames: PlasmicAbout__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicAbout__ArgProps,
+          internalVariantPropNames: PlasmicAbout__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicAbout__RenderFunc({
       variants,

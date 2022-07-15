@@ -83,9 +83,6 @@ export interface DefaultShowcase5SlotsProps {
   className?: string;
 }
 
-export const defaultShowcase5Slots__Args: Partial<PlasmicShowcase5Slots__ArgsType> =
-  {};
-
 function PlasmicShowcase5Slots__RenderFunc(props: {
   variants: PlasmicShowcase5Slots__VariantsArgs;
   args: PlasmicShowcase5Slots__ArgsType;
@@ -94,9 +91,19 @@ function PlasmicShowcase5Slots__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultShowcase5Slots__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   return (
     <p.Stack
@@ -595,12 +602,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicShowcase5Slots__ArgProps,
-      internalVariantPropNames: PlasmicShowcase5Slots__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicShowcase5Slots__ArgProps,
+          internalVariantPropNames: PlasmicShowcase5Slots__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicShowcase5Slots__RenderFunc({
       variants,

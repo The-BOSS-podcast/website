@@ -88,9 +88,6 @@ export interface DefaultAdvComparision3Props {
   className?: string;
 }
 
-export const defaultAdvComparision3__Args: Partial<PlasmicAdvComparision3__ArgsType> =
-  {};
-
 function PlasmicAdvComparision3__RenderFunc(props: {
   variants: PlasmicAdvComparision3__VariantsArgs;
   args: PlasmicAdvComparision3__ArgsType;
@@ -99,9 +96,19 @@ function PlasmicAdvComparision3__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultAdvComparision3__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -1081,12 +1088,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicAdvComparision3__ArgProps,
-      internalVariantPropNames: PlasmicAdvComparision3__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicAdvComparision3__ArgProps,
+          internalVariantPropNames: PlasmicAdvComparision3__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicAdvComparision3__RenderFunc({
       variants,

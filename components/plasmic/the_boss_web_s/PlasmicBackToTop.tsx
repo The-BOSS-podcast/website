@@ -59,8 +59,6 @@ export interface DefaultBackToTopProps {
   className?: string;
 }
 
-export const defaultBackToTop__Args: Partial<PlasmicBackToTop__ArgsType> = {};
-
 function PlasmicBackToTop__RenderFunc(props: {
   variants: PlasmicBackToTop__VariantsArgs;
   args: PlasmicBackToTop__ArgsType;
@@ -69,9 +67,19 @@ function PlasmicBackToTop__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultBackToTop__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   return (
     <p.Stack
@@ -152,12 +160,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicBackToTop__ArgProps,
-      internalVariantPropNames: PlasmicBackToTop__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicBackToTop__ArgProps,
+          internalVariantPropNames: PlasmicBackToTop__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicBackToTop__RenderFunc({
       variants,

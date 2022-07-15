@@ -65,9 +65,6 @@ export interface DefaultHomeBrands3Props {
   className?: string;
 }
 
-export const defaultHomeBrands3__Args: Partial<PlasmicHomeBrands3__ArgsType> =
-  {};
-
 function PlasmicHomeBrands3__RenderFunc(props: {
   variants: PlasmicHomeBrands3__VariantsArgs;
   args: PlasmicHomeBrands3__ArgsType;
@@ -76,9 +73,19 @@ function PlasmicHomeBrands3__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultHomeBrands3__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -190,12 +197,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicHomeBrands3__ArgProps,
-      internalVariantPropNames: PlasmicHomeBrands3__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicHomeBrands3__ArgProps,
+          internalVariantPropNames: PlasmicHomeBrands3__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicHomeBrands3__RenderFunc({
       variants,

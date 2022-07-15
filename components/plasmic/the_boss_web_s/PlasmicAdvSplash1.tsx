@@ -61,8 +61,6 @@ export interface DefaultAdvSplash1Props {
   className?: string;
 }
 
-export const defaultAdvSplash1__Args: Partial<PlasmicAdvSplash1__ArgsType> = {};
-
 function PlasmicAdvSplash1__RenderFunc(props: {
   variants: PlasmicAdvSplash1__VariantsArgs;
   args: PlasmicAdvSplash1__ArgsType;
@@ -71,9 +69,19 @@ function PlasmicAdvSplash1__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultAdvSplash1__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   return (
     <p.Stack
@@ -101,7 +109,37 @@ function PlasmicAdvSplash1__RenderFunc(props: {
               sty.text__bPq01
             )}
           >
-            {"Amplify Your Brand \nBy Advertising On Top Podcasts"}
+            <React.Fragment>
+              <React.Fragment>{""}</React.Fragment>
+              {
+                <span
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.span,
+                    projectcss.__wab_text,
+                    projectcss.plasmic_default__inline,
+                    sty.span__yRqM
+                  )}
+                >
+                  {"amplify"}
+                </span>
+              }
+              <React.Fragment>{" your brand \nby advertising "}</React.Fragment>
+              {
+                <span
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.span,
+                    projectcss.__wab_text,
+                    projectcss.plasmic_default__inline,
+                    sty.span__fdXdz
+                  )}
+                >
+                  {"on top podcasts"}
+                </span>
+              }
+              <React.Fragment>{""}</React.Fragment>
+            </React.Fragment>
           </div>
         </div>
       ) : null}
@@ -220,12 +258,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicAdvSplash1__ArgProps,
-      internalVariantPropNames: PlasmicAdvSplash1__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicAdvSplash1__ArgProps,
+          internalVariantPropNames: PlasmicAdvSplash1__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicAdvSplash1__RenderFunc({
       variants,

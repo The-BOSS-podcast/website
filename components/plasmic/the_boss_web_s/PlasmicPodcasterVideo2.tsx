@@ -75,9 +75,6 @@ export interface DefaultPodcasterVideo2Props {
   className?: string;
 }
 
-export const defaultPodcasterVideo2__Args: Partial<PlasmicPodcasterVideo2__ArgsType> =
-  {};
-
 function PlasmicPodcasterVideo2__RenderFunc(props: {
   variants: PlasmicPodcasterVideo2__VariantsArgs;
   args: PlasmicPodcasterVideo2__ArgsType;
@@ -86,9 +83,19 @@ function PlasmicPodcasterVideo2__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultPodcasterVideo2__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -350,12 +357,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicPodcasterVideo2__ArgProps,
-      internalVariantPropNames: PlasmicPodcasterVideo2__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicPodcasterVideo2__ArgProps,
+          internalVariantPropNames: PlasmicPodcasterVideo2__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicPodcasterVideo2__RenderFunc({
       variants,

@@ -38,8 +38,7 @@
           "name": "EmbedCss",
           "componentImportPath": "@plasmicpkgs/plasmic-embed-css"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "7nJ7UcFmq9UzB6eXfC5z4a",
@@ -58,8 +57,7 @@
           "name": "NavigationBar",
           "componentImportPath": "@plasmicpkgs/plasmic-nav"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "r3ASNrnyvLLLAtDvzUioQ",
@@ -78,8 +76,7 @@
           "name": "Slider",
           "componentImportPath": "react-slick"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "28Ba3BDvRe7EiWdfFNnLB6",
@@ -101,7 +98,7 @@
         {
           "id": "iBC45mjTXv",
           "name": "Slider",
-          "componentImportPath": "@plasmicpkgs/antd"
+          "componentImportPath": "@plasmicpkgs/antd/skinny/registerSlider"
         },
         {
           "id": "tRueht1jub",
@@ -131,7 +128,7 @@
         {
           "id": "F10gpQ1ZhXY",
           "name": "Collapse",
-          "componentImportPath": "@plasmicpkgs/antd"
+          "componentImportPath": "@plasmicpkgs/antd/skinny/registerCollapse"
         },
         {
           "id": "SAEWraOT2YV",
@@ -201,7 +198,7 @@
         {
           "id": "cv59X4q0WK",
           "name": "Dropdown",
-          "componentImportPath": "@plasmicpkgs/antd"
+          "componentImportPath": "@plasmicpkgs/antd/skinny/registerDropdown"
         },
         {
           "id": "cHUYQj2aKK",
@@ -216,10 +213,14 @@
         {
           "id": "Hb-DVgvuk3",
           "name": "Tabs",
-          "componentImportPath": "@plasmicpkgs/antd"
+          "componentImportPath": "@plasmicpkgs/antd/skinny/registerTabs"
+        },
+        {
+          "id": "Q0BhxRa-Moi",
+          "name": "Rate",
+          "componentImportPath": "antd/lib/rate"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "sx3ERcdAG6itf9PoNvoQTY",
@@ -2381,6 +2382,11 @@
           "id": "tZW4R6SDS",
           "name": "podcast2.jpg",
           "filePath": "../public/plasmic/the_boss_web_s/images/podcast2Jpg.jpeg"
+        },
+        {
+          "id": "whytFPj55",
+          "name": "dot-pattern-2.png",
+          "filePath": "../public/plasmic/the_boss_web_s/images/dotPattern2Png.png"
         }
       ],
       "indirect": false,
@@ -2402,6 +2408,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.182",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.182/dist/plasmic.schema.json"
+  "cliVersion": "0.1.184",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.184/dist/plasmic.schema.json"
 }

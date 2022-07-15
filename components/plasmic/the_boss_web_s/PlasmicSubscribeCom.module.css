@@ -1,9 +1,9 @@
 .root {
   flex-direction: column;
   background: rgba(12, 12, 12, 1);
-  width: 336px;
-  height: 225px;
-  display: flex;
+  width: auto;
+  height: auto;
+  display: inline-flex;
   overflow: hidden;
   position: relative;
   border-radius: 10px;
@@ -35,26 +35,33 @@
 .text___2Tlb6 {
   display: block;
   font-size: 18px;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Gilroy";
   font-weight: 700;
   letter-spacing: 0em;
   line-height: 100%;
   color: rgba(239, 239, 239, 1);
   align-self: center;
+  text-align: left;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .text___2Tlb6 {
+    text-align: center;
+  }
 }
 .text__hIyYr {
-  display: block;
-  font-size: 12px;
-  font-family: "Yantramanav", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.005em;
-  line-height: 100%;
-  color: rgba(183, 183, 183, 1);
   position: relative;
   top: auto;
   left: auto;
   right: auto;
   align-self: center;
+  color: var(--token-1Zgog-UZI);
+  font-family: "Gilroy";
+  text-align: left;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .text__hIyYr {
+    text-align: center;
+  }
 }
 .form {
   flex-direction: column;
@@ -99,7 +106,7 @@
 }
 .btnCtaPrimary {
   flex-direction: row;
-  height: 2.5rem;
+  height: var(--token-M5aAwOvxg);
   display: flex;
   position: relative;
   top: auto;
@@ -149,11 +156,11 @@
 .text__jxpdZ {
   display: block;
   font-size: 14px;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
   color: var(--token-d7pEWTAOn);
   position: relative;
   background: none;
+  font-family: "Merriweather Sans", sans-serif;
 }

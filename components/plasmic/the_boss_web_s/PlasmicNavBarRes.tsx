@@ -62,8 +62,6 @@ export interface DefaultNavBarResProps {
   className?: string;
 }
 
-export const defaultNavBarRes__Args: Partial<PlasmicNavBarRes__ArgsType> = {};
-
 function PlasmicNavBarRes__RenderFunc(props: {
   variants: PlasmicNavBarRes__VariantsArgs;
   args: PlasmicNavBarRes__ArgsType;
@@ -72,9 +70,19 @@ function PlasmicNavBarRes__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultNavBarRes__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -144,7 +152,7 @@ function PlasmicNavBarRes__RenderFunc(props: {
         />
       }
       forceOpenMenu={
-        hasVariant(globalVariants, "screen", "mobileOnly") ? false : false
+        hasVariant(globalVariants, "screen", "mobileOnly") ? true : false
       }
       itemsGap={
         hasVariant(globalVariants, "screen", "mobileOnly")
@@ -328,12 +336,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicNavBarRes__ArgProps,
-      internalVariantPropNames: PlasmicNavBarRes__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicNavBarRes__ArgProps,
+          internalVariantPropNames: PlasmicNavBarRes__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicNavBarRes__RenderFunc({
       variants,

@@ -132,15 +132,11 @@ export type PlasmicProduction__OverridesType = {
   videoBoss?: p.Flex<"div">;
   rectangle34?: p.Flex<"div">;
   group8?: p.Flex<"div">;
-  frame280?: p.Flex<"div">;
-  btn3?: p.Flex<"div">;
   btn4?: p.Flex<"a"> & Partial<LinkProps>;
   footerComDesk?: p.Flex<typeof FooterComDesk>;
 };
 
 export interface DefaultProductionProps {}
-
-export const defaultProduction__Args: Partial<PlasmicProduction__ArgsType> = {};
 
 function PlasmicProduction__RenderFunc(props: {
   variants: PlasmicProduction__VariantsArgs;
@@ -150,9 +146,19 @@ function PlasmicProduction__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultProduction__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -166,6 +172,11 @@ function PlasmicProduction__RenderFunc(props: {
         <meta
           key="og:title"
           property="og:title"
+          content={"Podcast Production"}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
           content={"Podcast Production"}
         />
       </Head>
@@ -235,7 +246,39 @@ function PlasmicProduction__RenderFunc(props: {
                     sty.text__soR6O
                   )}
                 >
-                  {"Create an Impact. \nWith Your Own Podcast Show"}
+                  <React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
+                    {
+                      <span
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.span,
+                          projectcss.__wab_text,
+                          projectcss.plasmic_default__inline,
+                          sty.span__n55Zy
+                        )}
+                      >
+                        {"create"}
+                      </span>
+                    }
+                    <React.Fragment>
+                      {" an impact. \nwith your "}
+                    </React.Fragment>
+                    {
+                      <span
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.span,
+                          projectcss.__wab_text,
+                          projectcss.plasmic_default__inline,
+                          sty.span__ehon8
+                        )}
+                      >
+                        {"own podcast"}
+                      </span>
+                    }
+                    <React.Fragment>{" show"}</React.Fragment>
+                  </React.Fragment>
                 </div>
 
                 {true ? (
@@ -373,7 +416,7 @@ function PlasmicProduction__RenderFunc(props: {
                       >
                         {hasVariant(globalVariants, "screen", "mobileOnly")
                           ? "The BOSS is your one-stop podcasting solution"
-                          : "The BOSS is your one-stop podcasting solution"}
+                          : "the BOSS is your one-stop podcasting solution"}
                       </div>
                     </div>
                   ) : null}
@@ -901,9 +944,11 @@ function PlasmicProduction__RenderFunc(props: {
                           </div>
                         </div>
 
-                        <div
+                        <p.Stack
+                          as={"div"}
                           data-plasmic-name={"frame100"}
                           data-plasmic-override={overrides.frame100}
+                          hasGap={true}
                           className={classNames(projectcss.all, sty.frame100)}
                         >
                           <div
@@ -927,7 +972,7 @@ function PlasmicProduction__RenderFunc(props: {
                               "Want to take your podcast to new listeners? The BOSS Media will help to programmatically to create marketable content for social media to push your podcast."
                             }
                           </div>
-                        </div>
+                        </p.Stack>
                       </p.Stack>
                     </div>
                   </p.Stack>
@@ -1173,9 +1218,11 @@ function PlasmicProduction__RenderFunc(props: {
                           </div>
                         </div>
 
-                        <div
+                        <p.Stack
+                          as={"div"}
                           data-plasmic-name={"frame113"}
                           data-plasmic-override={overrides.frame113}
+                          hasGap={true}
                           className={classNames(projectcss.all, sty.frame113)}
                         >
                           <div
@@ -1201,7 +1248,7 @@ function PlasmicProduction__RenderFunc(props: {
                               ? "It seems hard to write content, our dedicated team of writers will transcribe your podcast and give you shownotes for every episode."
                               : "It seems hard to write content, our dedicated team of writers will transcribe your podcast and give you shownotes for every episode."}
                           </div>
-                        </div>
+                        </p.Stack>
                       </p.Stack>
                     </div>
                   </p.Stack>
@@ -1301,59 +1348,42 @@ function PlasmicProduction__RenderFunc(props: {
                             : "'The Gentleman Show' is an ode to the modern gentleman who has broken the shackles of societal conventions and isn't afraid to be himself. He is constantly trying to unlearn, relearn and devise his understanding of becoming the modern gentleman and a better version of himself. \n\nThe podcast show will kick start conversations around what a man feels, faces, and strives to learn to polish his persona. Thus, 'The Gentleman Show' helps you accept yourself the way you are because your individuality makes you beautiful."}
                         </div>
 
-                        <div
-                          data-plasmic-name={"frame280"}
-                          data-plasmic-override={overrides.frame280}
-                          className={classNames(projectcss.all, sty.frame280)}
-                        >
-                          {false ? (
+                        {true ? (
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__quJ9
+                            )}
+                          >
                             <p.Stack
-                              as={"div"}
-                              data-plasmic-name={"btn3"}
-                              data-plasmic-override={overrides.btn3}
+                              as={p.PlasmicLink}
+                              data-plasmic-name={"btn4"}
+                              data-plasmic-override={overrides.btn4}
                               hasGap={true}
-                              className={classNames(projectcss.all, sty.btn3)}
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.a,
+                                sty.btn4
+                              )}
+                              component={Link}
+                              href={
+                                "https://open.spotify.com/show/0fpcio0Qo3IxXDE01uWo68?si=5d60b04e165b4567" as const
+                              }
+                              platform={"nextjs"}
+                              target={"_blank" as const}
                             >
                               <div
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text__eztCz
+                                  sty.text__eZnmE
                                 )}
                               >
-                                {"Start advertising"}
+                                {"Listen Now on Spotify"}
                               </div>
                             </p.Stack>
-                          ) : null}
-
-                          <p.Stack
-                            as={p.PlasmicLink}
-                            data-plasmic-name={"btn4"}
-                            data-plasmic-override={overrides.btn4}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.a,
-                              sty.btn4
-                            )}
-                            component={Link}
-                            href={
-                              "https://open.spotify.com/show/0fpcio0Qo3IxXDE01uWo68?si=5d60b04e165b4567" as const
-                            }
-                            platform={"nextjs"}
-                            target={"_blank" as const}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__eZnmE
-                              )}
-                            >
-                              {"Listen Now on Spotify"}
-                            </div>
-                          </p.Stack>
-                        </div>
+                          </div>
+                        ) : null}
                       </p.Stack>
                     </div>
                   </p.Stack>
@@ -1438,8 +1468,6 @@ const PlasmicDescendants = {
     "videoBoss",
     "rectangle34",
     "group8",
-    "frame280",
-    "btn3",
     "btn4",
     "footerComDesk"
   ],
@@ -1506,8 +1534,6 @@ const PlasmicDescendants = {
     "videoBoss",
     "rectangle34",
     "group8",
-    "frame280",
-    "btn3",
     "btn4"
   ],
   ctAs: ["ctAs", "frame282", "btn8", "btn9"],
@@ -1627,20 +1653,10 @@ const PlasmicDescendants = {
   frame112: ["frame112", "nounTranscripts"],
   nounTranscripts: ["nounTranscripts"],
   frame113: ["frame113"],
-  columns: [
-    "columns",
-    "videoBoss",
-    "rectangle34",
-    "group8",
-    "frame280",
-    "btn3",
-    "btn4"
-  ],
+  columns: ["columns", "videoBoss", "rectangle34", "group8", "btn4"],
   videoBoss: ["videoBoss", "rectangle34"],
   rectangle34: ["rectangle34"],
-  group8: ["group8", "frame280", "btn3", "btn4"],
-  frame280: ["frame280", "btn3", "btn4"],
-  btn3: ["btn3"],
+  group8: ["group8", "btn4"],
   btn4: ["btn4"],
   footerComDesk: ["footerComDesk"]
 } as const;
@@ -1711,8 +1727,6 @@ type NodeDefaultElementType = {
   videoBoss: "div";
   rectangle34: "div";
   group8: "div";
-  frame280: "div";
-  btn3: "div";
   btn4: "a";
   footerComDesk: typeof FooterComDesk;
 };
@@ -1747,12 +1761,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicProduction__ArgProps,
-      internalVariantPropNames: PlasmicProduction__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicProduction__ArgProps,
+          internalVariantPropNames: PlasmicProduction__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicProduction__RenderFunc({
       variants,
@@ -1840,8 +1858,6 @@ export const PlasmicProduction = Object.assign(
     videoBoss: makeNodeComponent("videoBoss"),
     rectangle34: makeNodeComponent("rectangle34"),
     group8: makeNodeComponent("group8"),
-    frame280: makeNodeComponent("frame280"),
-    btn3: makeNodeComponent("btn3"),
     btn4: makeNodeComponent("btn4"),
     footerComDesk: makeNodeComponent("footerComDesk"),
 

@@ -85,9 +85,6 @@ export interface DefaultPodcasterPerks5Props {
   className?: string;
 }
 
-export const defaultPodcasterPerks5__Args: Partial<PlasmicPodcasterPerks5__ArgsType> =
-  {};
-
 function PlasmicPodcasterPerks5__RenderFunc(props: {
   variants: PlasmicPodcasterPerks5__VariantsArgs;
   args: PlasmicPodcasterPerks5__ArgsType;
@@ -96,9 +93,19 @@ function PlasmicPodcasterPerks5__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultPodcasterPerks5__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -532,12 +539,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicPodcasterPerks5__ArgProps,
-      internalVariantPropNames: PlasmicPodcasterPerks5__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicPodcasterPerks5__ArgProps,
+          internalVariantPropNames: PlasmicPodcasterPerks5__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicPodcasterPerks5__RenderFunc({
       variants,

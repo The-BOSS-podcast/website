@@ -76,8 +76,6 @@ export type PlasmicHome__OverridesType = {
 
 export interface DefaultHomeProps {}
 
-export const defaultHome__Args: Partial<PlasmicHome__ArgsType> = {};
-
 function PlasmicHome__RenderFunc(props: {
   variants: PlasmicHome__VariantsArgs;
   args: PlasmicHome__ArgsType;
@@ -86,9 +84,19 @@ function PlasmicHome__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultHome__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -105,9 +113,27 @@ function PlasmicHome__RenderFunc(props: {
           content={"The Balls of Steel Show"}
         />
         <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={"The Balls of Steel Show"}
+        />
+        <meta
           key="description"
-          property="og:description"
           name="description"
+          content={
+            "The BOSS Media is a new age platform that connects podcasters and advertisers"
+          }
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={
+            "The BOSS Media is a new age platform that connects podcasters and advertisers"
+          }
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
           content={
             "The BOSS Media is a new age platform that connects podcasters and advertisers"
           }
@@ -347,12 +373,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicHome__ArgProps,
-      internalVariantPropNames: PlasmicHome__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicHome__ArgProps,
+          internalVariantPropNames: PlasmicHome__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicHome__RenderFunc({
       variants,

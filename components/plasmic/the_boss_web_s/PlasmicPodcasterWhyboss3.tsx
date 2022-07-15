@@ -122,9 +122,6 @@ export interface DefaultPodcasterWhyboss3Props {
   className?: string;
 }
 
-export const defaultPodcasterWhyboss3__Args: Partial<PlasmicPodcasterWhyboss3__ArgsType> =
-  {};
-
 function PlasmicPodcasterWhyboss3__RenderFunc(props: {
   variants: PlasmicPodcasterWhyboss3__VariantsArgs;
   args: PlasmicPodcasterWhyboss3__ArgsType;
@@ -133,9 +130,19 @@ function PlasmicPodcasterWhyboss3__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultPodcasterWhyboss3__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -1152,12 +1159,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicPodcasterWhyboss3__ArgProps,
-      internalVariantPropNames: PlasmicPodcasterWhyboss3__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicPodcasterWhyboss3__ArgProps,
+          internalVariantPropNames: PlasmicPodcasterWhyboss3__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicPodcasterWhyboss3__RenderFunc({
       variants,

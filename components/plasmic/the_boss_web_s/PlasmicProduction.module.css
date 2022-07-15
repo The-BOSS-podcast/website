@@ -92,7 +92,6 @@
   display: block;
   font-size: 48px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 56px;
@@ -101,6 +100,12 @@
   top: auto;
   left: auto;
   align-self: center;
+}
+.span__n55Zy {
+  color: var(--token-512meMn8y);
+}
+.span__ehon8 {
+  color: var(--token-512meMn8y);
 }
 .freeBox__g9X8J {
   display: flex;
@@ -121,7 +126,6 @@
   display: block;
   font-size: 18px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 24px;
@@ -218,7 +222,7 @@
   flex-direction: row;
   background: rgba(51, 50, 50, 1);
   width: auto;
-  height: 48px;
+  height: var(--token-M5aAwOvxg);
   display: flex;
   position: relative;
   overflow: hidden;
@@ -241,7 +245,7 @@
 .text__xalch {
   display: block;
   font-size: 16px;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
@@ -384,12 +388,12 @@
 }
 .text__ulHdd {
   display: block;
-  font-size: 28px;
-  font-family: "Yantramanav", sans-serif;
-  font-weight: 500;
+  font-size: 32px;
+  font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 100%;
   color: rgba(224, 224, 224, 1);
+  height: auto;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .text__ulHdd {
@@ -397,7 +401,6 @@
     align-self: center;
     display: block;
     font-size: 28px;
-    font-family: "Yantramanav", sans-serif;
     font-weight: 500;
     letter-spacing: -0.01em;
     line-height: 100%;
@@ -598,7 +601,6 @@
   display: block;
   font-size: 18px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
@@ -609,7 +611,6 @@
   display: block;
   font-size: 14px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;
@@ -751,7 +752,6 @@
   display: block;
   font-size: 18px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
@@ -763,7 +763,6 @@
   display: block;
   font-size: 14px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;
@@ -869,7 +868,6 @@
   display: block;
   font-size: 18px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
@@ -880,7 +878,6 @@
   display: block;
   font-size: 14px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;
@@ -959,10 +956,26 @@
   left: 9px;
 }
 .frame95 {
+  flex-direction: column;
   width: 207px;
-  display: block;
+  display: flex;
   position: relative;
   flex-grow: 1;
+}
+.frame95 > :global(.__wab_flex-container) {
+  flex-direction: column;
+  margin-top: calc(0px - var(--token-c44v_bqJM));
+  height: calc(100% + var(--token-c44v_bqJM));
+}
+.frame95 > :global(.__wab_flex-container) > *,
+.frame95 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.frame95 > :global(.__wab_flex-container) > picture > img,
+.frame95
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: var(--token-c44v_bqJM);
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .frame95 {
@@ -1000,14 +1013,13 @@
   display: block;
   font-size: 18px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
   color: rgba(239, 239, 239, 1);
-  position: absolute;
-  top: 0px;
-  left: 13px;
+  position: relative;
+  top: auto;
+  left: auto;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .text__heWHl {
@@ -1028,14 +1040,13 @@
   display: block;
   font-size: 14px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;
   color: rgba(138, 138, 136, 1);
-  position: absolute;
-  top: 32px;
-  left: 0px;
+  position: relative;
+  top: auto;
+  left: auto;
   width: 207px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -1242,7 +1253,6 @@
   display: block;
   font-size: 18px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
@@ -1253,7 +1263,6 @@
   display: block;
   font-size: 14px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;
@@ -1359,7 +1368,6 @@
   display: block;
   font-size: 18px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
@@ -1371,7 +1379,6 @@
   display: block;
   font-size: 14px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;
@@ -1477,7 +1484,6 @@
   display: block;
   font-size: 18px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
@@ -1488,7 +1494,6 @@
   display: block;
   font-size: 14px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;
@@ -1567,36 +1572,50 @@
   left: 9px;
 }
 .frame100 {
+  flex-direction: column;
   width: 207px;
-  display: block;
+  display: flex;
   position: relative;
   flex-grow: 1;
+}
+.frame100 > :global(.__wab_flex-container) {
+  flex-direction: column;
+  margin-top: calc(0px - var(--token-c44v_bqJM));
+  height: calc(100% + var(--token-c44v_bqJM));
+}
+.frame100 > :global(.__wab_flex-container) > *,
+.frame100 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.frame100 > :global(.__wab_flex-container) > picture > img,
+.frame100
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: var(--token-c44v_bqJM);
 }
 .text__wn8SU {
   display: block;
   font-size: 18px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
   color: rgba(239, 239, 239, 1);
-  position: absolute;
-  top: 0px;
-  left: 22px;
+  position: relative;
+  top: auto;
+  left: auto;
 }
 .text___0Ye32 {
   display: block;
   font-size: 14px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;
   color: rgba(138, 138, 136, 1);
-  position: absolute;
-  top: 32px;
-  left: 0px;
+  position: relative;
+  top: auto;
+  left: auto;
   width: 207px;
 }
 .frame101 {
@@ -1786,7 +1805,6 @@
   display: block;
   font-size: 18px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
@@ -1797,7 +1815,6 @@
   display: block;
   font-size: 14px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;
@@ -1903,7 +1920,6 @@
   display: block;
   font-size: 18px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
@@ -1915,7 +1931,6 @@
   display: block;
   font-size: 14px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;
@@ -2021,7 +2036,6 @@
   display: block;
   font-size: 18px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
@@ -2032,7 +2046,6 @@
   display: block;
   font-size: 14px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;
@@ -2146,10 +2159,26 @@
   left: 4px;
 }
 .frame113 {
+  flex-direction: column;
   width: 207px;
-  display: block;
+  display: flex;
   position: relative;
   flex-grow: 1;
+}
+.frame113 > :global(.__wab_flex-container) {
+  flex-direction: column;
+  margin-top: calc(0px - var(--token-c44v_bqJM));
+  height: calc(100% + var(--token-c44v_bqJM));
+}
+.frame113 > :global(.__wab_flex-container) > *,
+.frame113 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.frame113 > :global(.__wab_flex-container) > picture > img,
+.frame113
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: var(--token-c44v_bqJM);
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .frame113 {
@@ -2158,21 +2187,38 @@
     width: 207px;
     position: relative;
     flex-grow: 1;
-    flex-column-gap: 0px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .frame113 > :global(.__wab_flex-container) {
+    flex-direction: column;
+    margin-left: calc(0px - 0px);
+    width: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .frame113 > :global(.__wab_flex-container) > *,
+  .frame113 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .frame113 > :global(.__wab_flex-container) > picture > img,
+  .frame113
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 0px;
   }
 }
 .text__f17Ai {
   display: block;
   font-size: 18px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
   color: rgba(239, 239, 239, 1);
-  position: absolute;
-  top: 0px;
-  left: 4px;
+  position: relative;
+  top: auto;
+  left: auto;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .text__f17Ai {
@@ -2193,14 +2239,13 @@
   display: block;
   font-size: 14px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 100%;
   color: rgba(138, 138, 136, 1);
-  position: absolute;
-  top: 32px;
-  left: 0px;
+  position: relative;
+  top: auto;
+  left: auto;
   width: 207px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -2253,7 +2298,6 @@
 .text__or5Qc {
   display: block;
   font-size: 28px;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 100%;
@@ -2488,7 +2532,7 @@
 .text__yxOts {
   display: block;
   font-size: 16px;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-weight: 700;
   letter-spacing: 0.02em;
   line-height: 100%;
@@ -2500,7 +2544,6 @@
 .text__fEsqi {
   display: block;
   font-size: 32px;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 500;
   letter-spacing: -0.01em;
   line-height: 100%;
@@ -2529,15 +2572,16 @@
 .text___8C798 {
   display: block;
   font-size: 18px;
-  font-family: "Yantramanav", sans-serif;
-  font-weight: 400;
+  font-family: "Gilroy";
+  font-weight: 300;
   letter-spacing: 0em;
-  line-height: 100%;
+  line-height: var(--token-hg3E76HjE);
   color: rgba(138, 138, 136, 1);
+  width: 100%;
   position: relative;
   top: auto;
   left: auto;
-  width: 28rem;
+  min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .text___8C798 {
@@ -2555,62 +2599,26 @@
     min-width: 0;
   }
 }
-.frame280 {
-  background: rgba(255, 226, 58, 1);
-  width: 195px;
-  height: 48px;
-  display: block;
+.freeBox__quJ9 {
+  display: flex;
   position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
   top: auto;
   left: auto;
-  flex-shrink: 0;
-  border-radius: 4px;
-}
-.btn3 {
-  flex-direction: row;
-  background: rgba(255, 226, 58, 1);
-  width: auto;
-  height: 48px;
-  display: flex;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-  border-radius: 4px;
-  padding: 12px 24px;
-}
-.btn3 > :global(.__wab_flex-container) {
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-left: calc(0px - 10px);
-  width: calc(100% + 10px);
-}
-.btn3 > :global(.__wab_flex-container) > *,
-.btn3 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.btn3 > :global(.__wab_flex-container) > picture > img,
-.btn3 > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
-  margin-left: 10px;
-}
-.text__eztCz {
-  display: block;
-  font-size: 16px;
-  font-family: "Yantramanav", sans-serif;
-  font-weight: 500;
-  letter-spacing: 0em;
-  line-height: 100%;
-  color: rgba(12, 12, 12, 1);
-  position: relative;
+  min-width: 0;
+  padding: 8px;
 }
 .btn4 {
   flex-direction: row;
   background: rgba(255, 226, 58, 1);
   width: auto;
-  height: 48px;
+  height: var(--token-M5aAwOvxg);
   display: flex;
-  position: absolute;
-  top: 0px;
-  left: 0px;
   overflow: hidden;
   border-radius: 4px;
   padding: 12px 24px;
@@ -2631,7 +2639,7 @@
 .text__eZnmE {
   display: block;
   font-size: 16px;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;

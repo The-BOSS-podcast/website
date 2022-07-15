@@ -64,9 +64,6 @@ export interface DefaultHeaderComDeskProps {
   className?: string;
 }
 
-export const defaultHeaderComDesk__Args: Partial<PlasmicHeaderComDesk__ArgsType> =
-  {};
-
 function PlasmicHeaderComDesk__RenderFunc(props: {
   variants: PlasmicHeaderComDesk__VariantsArgs;
   args: PlasmicHeaderComDesk__ArgsType;
@@ -75,9 +72,19 @@ function PlasmicHeaderComDesk__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultHeaderComDesk__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   return (
     <div
@@ -310,12 +317,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicHeaderComDesk__ArgProps,
-      internalVariantPropNames: PlasmicHeaderComDesk__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicHeaderComDesk__ArgProps,
+          internalVariantPropNames: PlasmicHeaderComDesk__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicHeaderComDesk__RenderFunc({
       variants,

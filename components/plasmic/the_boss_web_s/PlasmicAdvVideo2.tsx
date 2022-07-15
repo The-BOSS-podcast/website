@@ -71,8 +71,6 @@ export interface DefaultAdvVideo2Props {
   className?: string;
 }
 
-export const defaultAdvVideo2__Args: Partial<PlasmicAdvVideo2__ArgsType> = {};
-
 function PlasmicAdvVideo2__RenderFunc(props: {
   variants: PlasmicAdvVideo2__VariantsArgs;
   args: PlasmicAdvVideo2__ArgsType;
@@ -81,9 +79,19 @@ function PlasmicAdvVideo2__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultAdvVideo2__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   return (
     <div
@@ -318,12 +326,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicAdvVideo2__ArgProps,
-      internalVariantPropNames: PlasmicAdvVideo2__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicAdvVideo2__ArgProps,
+          internalVariantPropNames: PlasmicAdvVideo2__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicAdvVideo2__RenderFunc({
       variants,

@@ -37,7 +37,6 @@
 .text___5Ql7I {
   display: block;
   font-size: 28px;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 100%;
@@ -197,7 +196,7 @@
 .text__oFiGr {
   display: block;
   font-size: 16px;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-weight: 700;
   letter-spacing: 0.02em;
   line-height: 100%;
@@ -209,8 +208,8 @@
 .text__jcolc {
   display: block;
   font-size: 32px;
-  font-family: "Yantramanav", sans-serif;
-  font-weight: 500;
+  font-family: "Gilroy";
+  font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 100%;
   color: rgba(239, 239, 239, 1);
@@ -219,63 +218,16 @@
 .text__oeCgP {
   display: block;
   font-size: 18px;
-  font-family: "Yantramanav", sans-serif;
-  font-weight: 400;
+  font-family: "Gilroy";
+  font-weight: 300;
   letter-spacing: 0em;
-  line-height: 100%;
+  line-height: var(--token-hg3E76HjE);
   color: rgba(138, 138, 136, 1);
-  position: relative;
-  top: auto;
-  left: auto;
   width: 100%;
-  min-width: 0;
-}
-.frame280 {
-  background: rgba(255, 226, 58, 1);
-  width: 195px;
-  height: 48px;
-  display: block;
   position: relative;
   top: auto;
   left: auto;
-  flex-shrink: 0;
-  border-radius: 4px;
-}
-.btn {
-  flex-direction: row;
-  background: rgba(255, 226, 58, 1);
-  width: auto;
-  height: 48px;
-  display: flex;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-  border-radius: 4px;
-  padding: 12px 24px;
-}
-.btn > :global(.__wab_flex-container) {
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-left: calc(0px - 10px);
-  width: calc(100% + 10px);
-}
-.btn > :global(.__wab_flex-container) > *,
-.btn > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.btn > :global(.__wab_flex-container) > picture > img,
-.btn > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
-  margin-left: 10px;
-}
-.text__olTZ {
-  display: block;
-  font-size: 16px;
-  font-family: "Yantramanav", sans-serif;
-  font-weight: 500;
-  letter-spacing: 0em;
-  line-height: 100%;
-  color: rgba(12, 12, 12, 1);
-  position: relative;
+  min-width: 0;
 }
 .btn2 {
   flex-direction: row;
@@ -283,10 +235,11 @@
   width: auto;
   height: var(--token-M5aAwOvxg);
   display: flex;
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  position: relative;
+  top: auto;
+  left: auto;
   overflow: hidden;
+  flex-shrink: 0;
   border-radius: 4px;
   padding: 12px 24px;
 }
@@ -306,10 +259,12 @@
 .text___6PsfR {
   display: block;
   font-size: 16px;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
   color: rgba(48, 40, 13, 1);
   position: relative;
+  width: auto;
+  height: auto;
 }

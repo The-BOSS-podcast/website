@@ -47,11 +47,16 @@
   display: block;
   font-size: 48px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 56px;
   color: rgba(239, 239, 239, 1);
+}
+.span__yRqM {
+  color: var(--token-512meMn8y);
+}
+.span__fdXdz {
+  color: var(--token-512meMn8y);
 }
 .freeBox__qrJqf {
   display: flex;
@@ -72,7 +77,6 @@
   display: block;
   font-size: 18px;
   text-align: center;
-  font-family: "Yantramanav", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 24px;
@@ -107,7 +111,7 @@
   flex-direction: row;
   background: rgba(255, 226, 58, 1);
   width: auto;
-  height: 48px;
+  height: var(--token-M5aAwOvxg);
   display: flex;
   position: relative;
   overflow: hidden;
@@ -130,7 +134,7 @@
 .text__le9A {
   display: block;
   font-size: 16px;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
@@ -141,7 +145,7 @@
   flex-direction: row;
   background: rgba(51, 50, 50, 1);
   width: auto;
-  height: 48px;
+  height: var(--token-M5aAwOvxg);
   display: flex;
   position: relative;
   overflow: hidden;
@@ -164,7 +168,7 @@
 .text__ofUux {
   display: block;
   font-size: 16px;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;

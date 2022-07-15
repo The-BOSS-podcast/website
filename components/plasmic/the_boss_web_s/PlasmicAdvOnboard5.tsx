@@ -82,9 +82,6 @@ export interface DefaultAdvOnboard5Props {
   className?: string;
 }
 
-export const defaultAdvOnboard5__Args: Partial<PlasmicAdvOnboard5__ArgsType> =
-  {};
-
 function PlasmicAdvOnboard5__RenderFunc(props: {
   variants: PlasmicAdvOnboard5__VariantsArgs;
   args: PlasmicAdvOnboard5__ArgsType;
@@ -93,9 +90,19 @@ function PlasmicAdvOnboard5__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultAdvOnboard5__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -545,12 +552,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicAdvOnboard5__ArgProps,
-      internalVariantPropNames: PlasmicAdvOnboard5__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicAdvOnboard5__ArgProps,
+          internalVariantPropNames: PlasmicAdvOnboard5__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicAdvOnboard5__RenderFunc({
       variants,

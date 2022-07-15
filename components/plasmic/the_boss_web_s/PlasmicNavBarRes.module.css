@@ -105,7 +105,7 @@
 .link__stvmZ {
   display: block;
   font-size: 14px;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Gilroy";
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
@@ -117,13 +117,14 @@
   .link__stvmZ {
     font-size: 1.5rem;
     margin-top: var(--token-U5AyfKMKn);
+    font-family: "Gilroy";
     padding: var(--token-c44v_bqJM);
   }
 }
 .link__trNq {
   display: block;
   font-size: 14px;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Gilroy";
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
@@ -134,13 +135,14 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .link__trNq {
     font-size: 1.5rem;
+    font-family: "Gilroy";
     padding: var(--token-c44v_bqJM);
   }
 }
 .link__rPdms {
   display: block;
   font-size: 14px;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Gilroy";
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
@@ -151,13 +153,14 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .link__rPdms {
     font-size: 1.5rem;
+    font-family: "Gilroy";
     padding: var(--token-c44v_bqJM);
   }
 }
 .link___1Seti {
   display: block;
   font-size: 14px;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Gilroy";
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
@@ -169,13 +172,14 @@
   .link___1Seti {
     font-size: 1.5rem;
     margin-top: var(--token-U5AyfKMKn);
+    font-family: "Gilroy";
     padding: var(--token-c44v_bqJM);
   }
 }
 .link___7Tn3O {
   display: block;
   font-size: 14px;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Gilroy";
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
@@ -186,13 +190,14 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .link___7Tn3O {
     font-size: 1.5rem;
+    font-family: "Gilroy";
     padding: var(--token-c44v_bqJM);
   }
 }
 .link__lJmX {
   display: block;
   font-size: 14px;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Gilroy";
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;
@@ -203,6 +208,7 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .link__lJmX {
     font-size: 1.5rem;
+    font-family: "Gilroy";
     padding: var(--token-c44v_bqJM);
   }
 }
@@ -273,7 +279,7 @@
 .text___48VK {
   display: block;
   font-size: 14px;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Gilroy";
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 100%;

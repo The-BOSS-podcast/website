@@ -77,8 +77,6 @@ export interface DefaultForbes30U3Props {
   className?: string;
 }
 
-export const defaultForbes30U3__Args: Partial<PlasmicForbes30U3__ArgsType> = {};
-
 function PlasmicForbes30U3__RenderFunc(props: {
   variants: PlasmicForbes30U3__VariantsArgs;
   args: PlasmicForbes30U3__ArgsType;
@@ -87,9 +85,19 @@ function PlasmicForbes30U3__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultForbes30U3__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   return (
     <p.Stack
@@ -249,12 +257,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicForbes30U3__ArgProps,
-      internalVariantPropNames: PlasmicForbes30U3__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicForbes30U3__ArgProps,
+          internalVariantPropNames: PlasmicForbes30U3__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicForbes30U3__RenderFunc({
       variants,

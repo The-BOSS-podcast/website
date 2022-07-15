@@ -62,9 +62,6 @@ export interface DefaultGuestsBrands4Props {
   className?: string;
 }
 
-export const defaultGuestsBrands4__Args: Partial<PlasmicGuestsBrands4__ArgsType> =
-  {};
-
 function PlasmicGuestsBrands4__RenderFunc(props: {
   variants: PlasmicGuestsBrands4__VariantsArgs;
   args: PlasmicGuestsBrands4__ArgsType;
@@ -73,9 +70,19 @@ function PlasmicGuestsBrands4__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultGuestsBrands4__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   return (
     <p.Stack
@@ -167,12 +174,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicGuestsBrands4__ArgProps,
-      internalVariantPropNames: PlasmicGuestsBrands4__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicGuestsBrands4__ArgProps,
+          internalVariantPropNames: PlasmicGuestsBrands4__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicGuestsBrands4__RenderFunc({
       variants,

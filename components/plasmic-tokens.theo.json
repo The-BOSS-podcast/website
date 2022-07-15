@@ -131,6 +131,16 @@
       }
     },
     {
+      "name": "para line height",
+      "type": "lineheight",
+      "value": "140%",
+      "category": "lineheight",
+      "meta": {
+        "projectId": "sx3ERcdAG6itf9PoNvoQTY",
+        "id": "hg3E76HjE"
+      }
+    },
+    {
       "name": "shadow-color",
       "type": "color",
       "value": "#232322",

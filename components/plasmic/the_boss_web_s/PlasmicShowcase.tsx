@@ -64,8 +64,6 @@ export type PlasmicShowcase__OverridesType = {
 
 export interface DefaultShowcaseProps {}
 
-export const defaultShowcase__Args: Partial<PlasmicShowcase__ArgsType> = {};
-
 function PlasmicShowcase__RenderFunc(props: {
   variants: PlasmicShowcase__VariantsArgs;
   args: PlasmicShowcase__ArgsType;
@@ -74,9 +72,19 @@ function PlasmicShowcase__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultShowcase__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -89,9 +97,27 @@ function PlasmicShowcase__RenderFunc(props: {
         <title key="title">{"Podcast Showcase"}</title>
         <meta key="og:title" property="og:title" content={"Podcast Showcase"} />
         <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={"Podcast Showcase"}
+        />
+        <meta
           key="description"
-          property="og:description"
           name="description"
+          content={
+            "The BOSS Media certifies podcasts before taking them to advertisers for podcast monetization."
+          }
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={
+            "The BOSS Media certifies podcasts before taking them to advertisers for podcast monetization."
+          }
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
           content={
             "The BOSS Media certifies podcasts before taking them to advertisers for podcast monetization."
           }
@@ -293,12 +319,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicShowcase__ArgProps,
-      internalVariantPropNames: PlasmicShowcase__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicShowcase__ArgProps,
+          internalVariantPropNames: PlasmicShowcase__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicShowcase__RenderFunc({
       variants,

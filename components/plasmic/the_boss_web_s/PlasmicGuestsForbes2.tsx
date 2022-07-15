@@ -66,9 +66,6 @@ export interface DefaultGuestsForbes2Props {
   className?: string;
 }
 
-export const defaultGuestsForbes2__Args: Partial<PlasmicGuestsForbes2__ArgsType> =
-  {};
-
 function PlasmicGuestsForbes2__RenderFunc(props: {
   variants: PlasmicGuestsForbes2__VariantsArgs;
   args: PlasmicGuestsForbes2__ArgsType;
@@ -77,9 +74,19 @@ function PlasmicGuestsForbes2__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultGuestsForbes2__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -544,12 +551,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicGuestsForbes2__ArgProps,
-      internalVariantPropNames: PlasmicGuestsForbes2__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicGuestsForbes2__ArgProps,
+          internalVariantPropNames: PlasmicGuestsForbes2__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicGuestsForbes2__RenderFunc({
       variants,

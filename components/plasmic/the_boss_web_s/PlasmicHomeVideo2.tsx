@@ -63,16 +63,12 @@ export type PlasmicHomeVideo2__OverridesType = {
   rectangle35?: p.Flex<"div">;
   frame2?: p.Flex<"div">;
   svg?: p.Flex<"svg">;
-  frame280?: p.Flex<"div">;
-  btn?: p.Flex<"div">;
   btn2?: p.Flex<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultHomeVideo2Props {
   className?: string;
 }
-
-export const defaultHomeVideo2__Args: Partial<PlasmicHomeVideo2__ArgsType> = {};
 
 function PlasmicHomeVideo2__RenderFunc(props: {
   variants: PlasmicHomeVideo2__VariantsArgs;
@@ -82,9 +78,19 @@ function PlasmicHomeVideo2__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultHomeVideo2__Args, props.args);
-  const $props = args;
+
   const $ctx = ph.useDataEnv?.() || {};
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
+
+  const $props = args;
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjp7EaCu1Pi8YJ()
@@ -183,7 +189,7 @@ function PlasmicHomeVideo2__RenderFunc(props: {
                   sty.text__jcolc
                 )}
               >
-                {"A bridge between Podcasters and Advertisers"}
+                {"a bridge between podcasters and advertisers"}
               </div>
 
               <div
@@ -198,55 +204,29 @@ function PlasmicHomeVideo2__RenderFunc(props: {
                 }
               </div>
 
-              <div
-                data-plasmic-name={"frame280"}
-                data-plasmic-override={overrides.frame280}
-                className={classNames(projectcss.all, sty.frame280)}
+              <p.Stack
+                as={p.PlasmicLink}
+                data-plasmic-name={"btn2"}
+                data-plasmic-override={overrides.btn2}
+                hasGap={true}
+                className={classNames(projectcss.all, projectcss.a, sty.btn2)}
+                component={Link}
+                href={
+                  "https://www.calendar.com/the-balls-of-steel-show/" as const
+                }
+                platform={"nextjs"}
+                target={"_blank" as const}
               >
-                {false ? (
-                  <p.Stack
-                    as={"div"}
-                    data-plasmic-name={"btn"}
-                    data-plasmic-override={overrides.btn}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.btn)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__olTZ
-                      )}
-                    >
-                      {"Start advertising"}
-                    </div>
-                  </p.Stack>
-                ) : null}
-
-                <p.Stack
-                  as={p.PlasmicLink}
-                  data-plasmic-name={"btn2"}
-                  data-plasmic-override={overrides.btn2}
-                  hasGap={true}
-                  className={classNames(projectcss.all, projectcss.a, sty.btn2)}
-                  component={Link}
-                  href={
-                    "https://www.calendar.com/the-balls-of-steel-show/" as const
-                  }
-                  platform={"nextjs"}
-                  target={"_blank" as const}
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___6PsfR
+                  )}
                 >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___6PsfR
-                    )}
-                  >
-                    {"Free Consultation Call"}
-                  </div>
-                </p.Stack>
-              </div>
+                  {"Free Consultation Call"}
+                </div>
+              </p.Stack>
             </p.Stack>
           ) : null}
         </p.Stack>
@@ -264,8 +244,6 @@ const PlasmicDescendants = {
     "rectangle35",
     "frame2",
     "svg",
-    "frame280",
-    "btn",
     "btn2"
   ],
   sectionHeading: ["sectionHeading"],
@@ -274,8 +252,6 @@ const PlasmicDescendants = {
   rectangle35: ["rectangle35"],
   frame2: ["frame2", "svg"],
   svg: ["svg"],
-  frame280: ["frame280", "btn", "btn2"],
-  btn: ["btn"],
   btn2: ["btn2"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -289,8 +265,6 @@ type NodeDefaultElementType = {
   rectangle35: "div";
   frame2: "div";
   svg: "svg";
-  frame280: "div";
-  btn: "div";
   btn2: "a";
 };
 
@@ -324,12 +298,16 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   const func = function <T extends PropsType>(
     props: T & StrictProps<T, PropsType>
   ) {
-    const { variants, args, overrides } = deriveRenderOpts(props, {
-      name: nodeName,
-      descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicHomeVideo2__ArgProps,
-      internalVariantPropNames: PlasmicHomeVideo2__VariantProps
-    });
+    const { variants, args, overrides } = React.useMemo(
+      () =>
+        deriveRenderOpts(props, {
+          name: nodeName,
+          descendantNames: [...PlasmicDescendants[nodeName]],
+          internalArgPropNames: PlasmicHomeVideo2__ArgProps,
+          internalVariantPropNames: PlasmicHomeVideo2__VariantProps
+        }),
+      [props, nodeName]
+    );
 
     return PlasmicHomeVideo2__RenderFunc({
       variants,
@@ -357,8 +335,6 @@ export const PlasmicHomeVideo2 = Object.assign(
     rectangle35: makeNodeComponent("rectangle35"),
     frame2: makeNodeComponent("frame2"),
     svg: makeNodeComponent("svg"),
-    frame280: makeNodeComponent("frame280"),
-    btn: makeNodeComponent("btn"),
     btn2: makeNodeComponent("btn2"),
 
     // Metadata about props expected for PlasmicHomeVideo2
